@@ -1,0 +1,16 @@
+﻿<Page x:Class="Invert911.FieldContact.FieldContactWorkspace"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:r="clr-namespace:Invert911.InvertCommon.StandardGui"
+    xmlns:FI="clr-namespace:Invert911.FieldContact"
+    Height="440" Width="500" Loaded="UserControl_Loaded" ShowsNavigationUI="True">
+    <Grid>
+        <TabControl Name="IncidentTabControl" Margin="0,0,0,7" TabStripPlacement="Top">
+            <TabItem  Header="Main">
+                <DockPanel LastChildFill="True">
+                    <FI:FieldContactMenu x:Name="MainFieldInverviewMenu" Width="Auto" Height="Auto"></FI:FieldContactMenu>
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

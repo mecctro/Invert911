@@ -1,0 +1,241 @@
+﻿<UserControl x:Class="Invert911.InvertCommon.Modules.Law.PolicePad.PolicePadEntry"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:i="clr-namespace:Invert911.InvertCommon.Modules.Law.PolicePad"
+    xmlns:p="clr-namespace:Invert911.InvertCommon.Modules.Person"
+    xmlns:v="clr-namespace:Invert911.InvertCommon.Modules.Vehicle"
+    xmlns:pr="clr-namespace:Invert911.InvertCommon.Modules.Property"
+    xmlns:c="clr-namespace:Invert911.InvertCommon.Modules"
+    xmlns:a="clr-namespace:Invert911.InvertCommon.Modules.Arrest"
+    
+    Height="663" Width="1020">
+    
+    <!--xmlns:rv="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"-->
+    
+    <DockPanel LastChildFill="True">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" DockPanel.Dock="Right">
+            <StackPanel  Orientation="Vertical" >
+                <Label HorizontalAlignment="Center" Height="25" Width="70" Name="MenuLabel" FontStretch="Normal">Incident</Label>
+                <Button Height="70" Width="70" Name="SaveButton" Click="SaveButton_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/SaveFileLarge.png" />
+                        <TextBlock Text="Save" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button Height="70" Width="70" Name="PrintButton" IsEnabled="True" Click="PrintButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/printer.png" />
+                        <TextBlock Text="Print" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button Height="70" Width="70" Name="CopyButton" Visibility="Collapsed">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/OCP_Logo.jpg" />
+                        <TextBlock Text="Copy" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button Height="70" Width="70" Name="PrevButton" Click="PrevButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/ButtonBack.png" />
+                        <TextBlock Text="Prev" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button Height="70" Width="70" Name="NextButton" Click="NextButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/ButtonForward.png" />
+                        <TextBlock Text="Next" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button Height="70" Width="70" Name="DeleteButton" Click="DeleteButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/DragRemove.png" />
+                        <TextBlock Text="Delete" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button Height="70" Width="70" Name="CancelButton" Click="CancelButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/ButtonRefresh.png" />
+                        <TextBlock Text="Cancel" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button Height="70" Width="70" Name="CloseButton" Click="CloseButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/check.png" />
+                        <TextBlock Text="Close" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+
+
+                
+            </StackPanel>
+        </ScrollViewer>
+        <TabControl  Name="MainTabControl" Canvas.Top="18" Grid.RowSpan="2" FontSize="12">
+            <TabItem    >
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/text.png" />
+                        <TextBlock Text="Incident" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <i:PolicePadControl Height="auto" Width="auto" x:Name="IncidentControlUC"></i:PolicePadControl>
+            </TabItem>
+            <TabItem Name="PersonTabItem" >
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/Person.png" />
+                        <TextBlock Text="Person" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <p:Persons x:Name="IncidentPersons" Width="Auto" Height="Auto"></p:Persons>
+            </TabItem>
+            <TabItem Name="VehicleTabItem">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/car_sedan_grey.ico" />
+                        <TextBlock Text="Vehicle" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <v:Vehicles x:Name="IncidentVehicles" Width="Auto" Height="Auto"></v:Vehicles>
+            </TabItem>
+            <TabItem >
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/cubes.png" />
+                        <TextBlock Text="Property" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <pr:Properties x:Name="IncidentProperties"></pr:Properties>
+            </TabItem>
+            <TabItem IsEnabled="True">
+                <TabItem.Header>
+                    <StackPanel Margin="0,0,4,0"  Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/Task%20Report.png" />
+                        <TextBlock Text="Supporting Docs" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <TabControl>
+                    <TabItem >
+                        <TabItem.Header>
+                            <StackPanel Margin="0,0,4,0"  Orientation="Horizontal">
+                                <Image Height="18" Source="/Invert911.InvertCommon;component/Images/Attachment.png" />
+                                <TextBlock Text="Attachments" Margin="2,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <c:Attachments x:Name="IncidentAttachments" Grid.Row="0" Grid.Column="0" Width="Auto" Height="Auto"></c:Attachments>
+                    </TabItem>
+                    <TabItem >
+                        <TabItem.Header>
+                            <StackPanel Margin="0,0,4,0"  Orientation="Horizontal">
+                                <Image Height="18" Source="/Invert911.InvertCommon;component/Images/link.png" />
+                                <TextBlock Text="Links" Margin="2,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <c:Links x:Name="IncidentLinks" Grid.Row="1" Grid.Column="1" Width="Auto" Height="Auto"></c:Links>
+                    </TabItem>
+                </TabControl>
+               
+            </TabItem>
+            <!--<TabItem IsEnabled="True">
+                <TabItem.Header>
+                    <StackPanel Margin="0,0,4,0"  Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/link.png" />
+                        <TextBlock Text="Links" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                
+            </TabItem>-->
+            <TabItem Name="NarrativeTabItem">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/Narrative.png" />
+                        <TextBlock Text="Narrative" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <TabControl TabStripPlacement="Top" FlowDirection="LeftToRight">
+                    <TabItem Header="Summary" Width="120">
+                        <c:Narrative x:Name="SummaryNarrative" Width="Auto" Height="Auto"></c:Narrative>
+                    </TabItem>
+                    <TabItem  Header="Narrative" Width="120">
+                        <c:Narrative x:Name="MainNarrative" Width="Auto" Height="Auto"></c:Narrative>
+                    </TabItem>
+                </TabControl>
+            </TabItem>
+            <TabItem Name="ModusOperandiTabItem" Visibility="Collapsed" IsEnabled="True" >
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/graphics-tablet.png" />
+                        <TextBlock Text="Modus Operandi" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <DockPanel LastChildFill="True">
+                    <ListView DockPanel.Dock="Top">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="140" Header="Type" />
+                                <GridViewColumn Width="140" Header="Value" />
+                                <GridViewColumn Width="140" Header="Description" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </DockPanel>
+            </TabItem>
+            <!--<TabItem  Name="ArrestTabItem" IsEnabled="False" Visibility="Collapsed">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/dude5.png" />
+                        <TextBlock Text="Arrest" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <a:Arrests Width="Auto" Height="Auto"></a:Arrests>
+            </TabItem>-->
+            <TabItem Name="OffenseTabItem" Visibility="Collapsed" IsEnabled="True">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/book_open.png" />
+                        <TextBlock Text="Offense" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <c:Offense Width="Auto" Height="Auto"></c:Offense>
+            </TabItem>
+            
+            <!--<TabItem Header="Sketch" Name="SketchTabItem">
+                <DockPanel LastChildFill="True" ></DockPanel>
+            </TabItem>-->
+
+            <TabItem Name="LinkageTabItem" Visibility="Collapsed" IsEnabled="True">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/cube_molecule.png" />
+                        <TextBlock Text="Associations" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <c:Linkage x:Name="LawIncidentAssociations"></c:Linkage>
+            </TabItem>
+
+            <TabItem Name="ReportTabItem" IsEnabled="True">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/ScriptPass.png" />
+                        <TextBlock Text="Reports" Margin="2,0,0,0" VerticalAlignment="Center" />
+                    </StackPanel>
+                </TabItem.Header>
+                <DockPanel LastChildFill="True">
+                    <ToolBarPanel DockPanel.Dock="Top" Orientation="Horizontal" >
+                        <Button Name="StandardReportButton"  Content="Standard Incident Report" Click="StandardReportButton_Click" ></Button>
+                        <!--<Button Name="MediaIncidentButton"  Content="Media Incident Report"  Click="MediaIncidentButton_Click" ></Button>-->
+                        <Button Name="DeltaIncidentButton"  Content="Delta Incident Report" Click="DeltaIncidentButton_Click" ></Button>
+                        <Button Name="ExportDataReport" Content="Export Data Report" Click="ExportDataReport_Click"></Button>
+                        <Button Name="ExportSchemaReport" Content="Export Schema Report" Click="ExportSchemaReport_Click"></Button>
+                    </ToolBarPanel>
+                    
+                    <!--<WindowsFormsHost>
+                        <rv:ReportViewer x:Name="PrintReportViewer"/>
+                    </WindowsFormsHost>-->
+                    <WebBrowser Name="PrintReportBrowser" Navigating="PrintReportBrowser_Navigating" Navigated="PrintReportBrowser_Navigated"/>
+
+                </DockPanel>
+            </TabItem>
+
+        </TabControl>
+    </DockPanel>
+</UserControl>

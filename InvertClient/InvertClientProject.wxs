@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="InvertClient.Binaries" />
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertClient.Binaries">
+            <ComponentRef Id="cmpD2F42746C0724D36932D79E89510C32C" />
+            <ComponentRef Id="cmpD641484A7FFED234C0D095E21779B375" />
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="InvertClient.Content">
+            <Directory Id="dirC1CF4200F248E0EDD48F80C120747BE3" Name="x64" />
+            <Directory Id="dir429EF43F88FCDA8F9887DD496C60E99C" Name="x86" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertClient.Content">
+            <ComponentRef Id="cmp9F5A753DA3218593D8DE63FF9506A5EA" />
+            <ComponentRef Id="cmp842E61764E1534ED72B469ABDDF933FC" />
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertClient.Documents" />
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertClientBinaries">
+            <Component Id="cmpD2F42746C0724D36932D79E89510C32C" Directory="InvertClient.Binaries" Guid="*">
+                <File Id="filD1E62F4A0B29FDB1B520733D93D35AF4" Source="$(var.InvertClient.TargetDir)\Invert911.InvertClient.exe" />
+            </Component>
+            <Component Id="cmpD641484A7FFED234C0D095E21779B375" Directory="InvertClient.Binaries" Guid="*">
+                <File Id="filCAFEAFCEDB13809AE99A258C8F30D7B8" Source="$(var.InvertClient.TargetDir)\Invert911.InvertClient.exe.config" />
+            </Component>
+            <Component Id="cmp9F5A753DA3218593D8DE63FF9506A5EA" Directory="dirC1CF4200F248E0EDD48F80C120747BE3" Guid="*">
+                <File Id="filEDA23EFC3DDB59843C60B7A2D42C5281" Source="$(var.InvertClient.ProjectDir)\x64\SQLite.Interop.dll" />
+            </Component>
+            <Component Id="cmp842E61764E1534ED72B469ABDDF933FC" Directory="dir429EF43F88FCDA8F9887DD496C60E99C" Guid="*">
+                <File Id="fil4810141247ADDF1D86A8F09265E65EFA" Source="$(var.InvertClient.ProjectDir)\x86\SQLite.Interop.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="Invert911.CAD.UnitStatusPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="UnitStatusPage" Height="371" Width="497">
+    <DockPanel LastChildFill="True">
+        <ListView >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Status"/>
+                    <GridViewColumn Header="Unit"/>
+                    <GridViewColumn Header="Location"/>
+                    <GridViewColumn Header="Ping Date" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</Window>

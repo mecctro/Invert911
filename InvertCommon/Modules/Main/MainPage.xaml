@@ -1,0 +1,9 @@
+﻿<Page x:Class="Invert911.MDT.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    
+    Title="MainPage" ShowsNavigationUI="True" Loaded="Page_Loaded"   >
+    <DockPanel LastChildFill="True" >
+		<TabControl Name="ModulesTabControl" Background="Transparent" ></TabControl>
+    </DockPanel>
+</Page>

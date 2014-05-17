@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="InvertCommon.Binaries" />
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertCommon.Binaries">
+            <ComponentRef Id="cmp43A0CA5DD0DA1685CF6FC790DAD4E9F3" />
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="InvertCommon.Content">
+            <Directory Id="dir2B55B74082A9167D3A9398FDBEE50DB1" Name="Reports" />
+            <Directory Id="dir7A71A805878F2C4A8103182C9BF716E7" Name="x64" />
+            <Directory Id="dirF59E1019178DB4A4A3D7F927BE285785" Name="x86" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertCommon.Content">
+            <ComponentRef Id="cmpAA547C265E531F3F15765C15EC4377D8" />
+            <ComponentRef Id="cmp29A86384D3FC25CFE92F6EFCF41709BD" />
+            <ComponentRef Id="cmpA230CE725553C930984629A8C66FC0BF" />
+            <ComponentRef Id="cmpBD86A6554D42DD1E95CFDD412FFC4736" />
+            <ComponentRef Id="cmp03409A995E0E8E448EF2F774E4778888" />
+            <ComponentRef Id="cmpA4640F5B11411AB89B43F2CD60D1DF8B" />
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertCommon.Documents" />
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertCommonBinaries">
+            <Component Id="cmp43A0CA5DD0DA1685CF6FC790DAD4E9F3" Directory="InvertCommon.Binaries" Guid="*">
+                <File Id="fil3F6BD30D0211BAE86BB998F9B690EE78" Source="$(var.InvertCommon.TargetDir)\Invert911.InvertCommon.dll" />
+            </Component>
+            <Component Id="cmpAA547C265E531F3F15765C15EC4377D8" Directory="dir4933B728AE5F077725B56C55E4053EA5" Guid="*">
+                <File Id="filE3AFF7F5D1E7F9F4604AD48FE5423F09" Source="$(var.InvertCommon.ProjectDir)\Reports\LawIncident\CHP555\chp555_Page1.pdf" />
+            </Component>
+            <Component Id="cmp29A86384D3FC25CFE92F6EFCF41709BD" Directory="dir4933B728AE5F077725B56C55E4053EA5" Guid="*">
+                <File Id="fil2FA9683FF3D8840084AE480121ADE404" Source="$(var.InvertCommon.ProjectDir)\Reports\LawIncident\CHP555\chp555_Page2.pdf" />
+            </Component>
+            <Component Id="cmpA230CE725553C930984629A8C66FC0BF" Directory="dir4933B728AE5F077725B56C55E4053EA5" Guid="*">
+                <File Id="fil570C6B5C709D71179FE97BB3D9E5A9F9" Source="$(var.InvertCommon.ProjectDir)\Reports\LawIncident\CHP555\chp555_Page3.pdf" />
+            </Component>
+            <Component Id="cmpBD86A6554D42DD1E95CFDD412FFC4736" Directory="dir4933B728AE5F077725B56C55E4053EA5" Guid="*">
+                <File Id="fil803F13DA7125831C523A7FCD0F9312C2" Source="$(var.InvertCommon.ProjectDir)\Reports\LawIncident\CHP555\chp555_Page4.pdf" />
+            </Component>
+            <Component Id="cmp03409A995E0E8E448EF2F774E4778888" Directory="dir7A71A805878F2C4A8103182C9BF716E7" Guid="*">
+                <File Id="filC96026E5A231262D323126027030B2E7" Source="$(var.InvertCommon.ProjectDir)\x64\SQLite.Interop.dll" />
+            </Component>
+            <Component Id="cmpA4640F5B11411AB89B43F2CD60D1DF8B" Directory="dirF59E1019178DB4A4A3D7F927BE285785" Guid="*">
+                <File Id="fil563EB899197F9899DDD602B498E33D2B" Source="$(var.InvertCommon.ProjectDir)\x86\SQLite.Interop.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6F6327E10044647ADE72358525C7E043">
+            <Directory Id="dir4933B728AE5F077725B56C55E4053EA5" Name="CHP555" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir2B55B74082A9167D3A9398FDBEE50DB1">
+            <Directory Id="dir6F6327E10044647ADE72358525C7E043" Name="LawIncident" />
+        </DirectoryRef>
+    </Fragment>
+</Wix>

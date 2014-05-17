@@ -1,0 +1,135 @@
+﻿<Page x:Class="Invert911.Admin.SecurityPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:sg="clr-namespace:Invert911.InvertCommon.StandardGui"
+      Title="Security" 
+      ShowsNavigationUI="True" 
+      mc:Ignorable="d" 
+      Loaded="Page_Loaded"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      d:DesignHeight="401" 
+      d:DesignWidth="715">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29" />
+            <RowDefinition Height="352*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="146*" />
+            <ColumnDefinition Width="352*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="ToolbarStackPanel" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
+            <Button Name="AddButton" Click="AddButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="18" Source="/Invert911.InvertCommon;component/Images/DragCopy.png" />
+                    <TextBlock Text="Add" Margin="2,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="RefreshButton" Click="RefreshButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="18" Source="/Invert911.InvertCommon;component/Images/Refresh1.png" />
+                    <TextBlock Text="Refresh" Margin="2,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="DeleteButton" Click="DeleteButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="18" Source="/Invert911.InvertCommon;component/Images/DragRemove.png" />
+                    <TextBlock Text="Delete" Margin="2,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Label Width="11"></Label>
+            <Button Name="SelectAllButton" Click="SelectAllButton_Click" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="18" Source="/Invert911.InvertCommon;component/Images/document_check.png" />
+                    <TextBlock Text="Select All" Margin="2,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="UnSelectAllButton" Click="UnSelectAllButton_Click" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="18" Source="/Invert911.InvertCommon;component/Images/document_check.png" />
+                    <TextBlock Text="UnSelect All" Margin="2,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Label Width="11"></Label>
+            <Button Name="SaveButton" Click="SaveButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="18" Source="/Invert911.InvertCommon;component/Images/SaveFileLarge.png" />
+                    <TextBlock Text="Save" Margin="2,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="CancelButton" Click="CancelButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="18" Source="/Invert911.InvertCommon;component/Images/RedoLarge.png" />
+                    <TextBlock Text="Cancel" Margin="2,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Label Width="26"></Label>
+            <Label  Height="26" x:Name="AgencyLabel" >Agency:</Label>
+            <sg:i9ComboBox Width="150" IsEditable="True"  Height="26" x:Name="AgencyComboBox" SelectionChanged="AgencyComboBox_SelectionChanged"  IsReadOnly="True">
+            </sg:i9ComboBox>
+            <Label Name="ErrorMsgLabel"></Label>
+        </StackPanel>
+
+        <GroupBox Header="Security Groups" Grid.Column="0" Grid.Row="1" Name="SecurityGroupsGroupBox">
+            <ListBox  Name="SecurityGroupsListBox" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" SelectionChanged="SecurityGroupsListBox_SelectionChanged" >
+
+            </ListBox>
+        </GroupBox>
+        <DockPanel Grid.Column="1" Grid.Row="1" Name="MainDockPanel">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                <Label>Security Group Name:</Label>
+                <sg:i9TextBox Width="150" x:Name="SecurityGroupTextbox" Text="{Binding Path=SecurityGroupName, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"></sg:i9TextBox>
+                <Label Width="7"></Label>
+                <Button Name="SecurityGroupEditButton" Click="SecurityGroupEditButton_Click">Edit Name</Button>
+                <Button Name="SecurityGroupSaveButton" Click="SecurityGroupSaveButton_Click" >Save Name</Button>
+                <Button Name="SecurityGroupCancelButton" Click="SecurityGroupCancelButton_Click" >Cancel Edit</Button>
+            </StackPanel>
+            <TabControl  Name="SecurityTabControl">
+                <TabItem Header="Modules">
+                    <ListView Name="ModulesListView" >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn  >
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <CheckBox Margin="0" VerticalAlignment="Center" IsChecked="{Binding Path=Enabled}" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Section" DisplayMemberBinding= "{Binding Section}" Width="120"/>
+                                <GridViewColumn Header="Module Name" DisplayMemberBinding= "{Binding ModuleName}" Width="120"/>
+                                <GridViewColumn Header="Popup Page" DisplayMemberBinding= "{Binding PopupPage}" Width="120"/>
+                                <GridViewColumn Header="Desktop Enabled" DisplayMemberBinding= "{Binding DesktopEnabled}" Width="120"/>
+                                <GridViewColumn Header="Mobile Enabled" DisplayMemberBinding= "{Binding MobileEnabled}" Width="120"/>
+                                <GridViewColumn Header="Module Type" DisplayMemberBinding= "{Binding ModuleType}" Width="120"/>
+                                <GridViewColumn Header="i9ModuleID"  DisplayMemberBinding= "{Binding i9ModuleID}" Width="0" />
+                                <GridViewColumn Header="File Name" DisplayMemberBinding= "{Binding FileName}" Width="120"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                </TabItem>
+                <TabItem Header="Tasks">
+                    <ListView Name="TaskListView"  SelectionMode="Single">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <CheckBox Margin="0" VerticalAlignment="Center" IsChecked="{Binding Path=Enabled}" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn  Width="200" Header="Task Name" DisplayMemberBinding= "{Binding TaskName}" />
+                                <GridViewColumn  Width="350" Header="Task Desc"  DisplayMemberBinding= "{Binding TaskDesc}"  />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </TabItem>
+            </TabControl>
+        </DockPanel>
+        
+        
+    </Grid>
+</Page>

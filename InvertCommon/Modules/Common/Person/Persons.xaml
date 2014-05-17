@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Invert911.InvertCommon.Modules.Person.Persons"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="clr-namespace:Invert911.InvertCommon.Modules.Person">
+    <DockPanel LastChildFill="True" >
+        <DockPanel DockPanel.Dock="Top" >
+            <StackPanel DockPanel.Dock="Left" MinWidth="90">
+                <Button x:Name="PersonAdd" Click="PersonAdd_Click">Add</Button>
+                <Button x:Name="PersonRemove" Click="PersonRemove_Click">Remove</Button>
+                <Button x:Name="PersonCopy" Click="PersonCopy_Click" IsEnabled="False">Copy</Button>
+                <Button x:Name="PersonPaste" Click="PersonPaste_Click" IsEnabled="False">Paste</Button>
+            </StackPanel>
+            <ListView x:Name="PersonListView" Height="105" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" SelectionMode="Single">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="140" Header="Sequence Number" DisplayMemberBinding= "{Binding SequenceNumber}"/>
+                        <GridViewColumn Width="140" Header="Last" DisplayMemberBinding= "{Binding LastName}"/>
+                        <GridViewColumn Width="140" Header="First" DisplayMemberBinding= "{Binding FirstName}"/>
+                        <GridViewColumn Width="140" Header="Middle" DisplayMemberBinding= "{Binding MiddleName}"/>
+                        <GridViewColumn Width="140" Header="Birth Date" DisplayMemberBinding= "{Binding BirthDate}"/>
+                        <GridViewColumn Width="140" Header="Sex" DisplayMemberBinding= "{Binding SexCode}"/>
+                        <GridViewColumn Width="140" Header="Race" DisplayMemberBinding= "{Binding RaceCode}"/>
+                        <GridViewColumn Width="140" Header="Ethnicity" DisplayMemberBinding= "{Binding EthnicityCode}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </DockPanel>
+		
+		<p:Person  x:Name="MainPeron"  Width="Auto" Height="Auto"></p:Person>
+	</DockPanel>
+</UserControl>

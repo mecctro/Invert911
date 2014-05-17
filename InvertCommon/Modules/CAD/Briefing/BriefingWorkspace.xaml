@@ -1,0 +1,27 @@
+﻿<Page x:Class="Invert911.Briefing.BriefingWorkspace"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:annot="clr-namespace:System.Windows.Annotations;assembly=PresentationFramework"
+    Height="300" Width="300" Initialized="Window_Initialized" Unloaded="UserControl_Unloaded" ShowsNavigationUI="True">
+    <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Top">
+            <Button Content="Text Sticky Note" Command="annot:AnnotationService.CreateTextStickyNoteCommand" CommandTarget="{Binding ElementName=flowDoc}"></Button>
+            <Button Content="Ink Sticky Note" Command="annot:AnnotationService.CreateInkStickyNoteCommand" CommandTarget="{Binding ElementName=flowDoc}"></Button>
+            <Button Content="Delete Sticky Note" Command="annot:AnnotationService.DeleteStickyNotesCommand" CommandTarget="{Binding ElementName=flowDoc}"></Button>
+        </StackPanel>
+        <FlowDocumentReader x:Name="flowDoc">
+            <FlowDocument>
+                <Paragraph >
+                    FlowDocumentReader includes features that enable the user to dynamically choose between various viewing modes, including a single-page (page-at-a-time) viewing mode, a two-page-at-a-time (book reading format) viewing mode, and a continuous scrolling (bottomless) viewing mode.
+                </Paragraph>
+                <Paragraph>
+                    If you do not need the ability to dynamically switch between different viewing modes, there are lighter-weight flow content viewers that are fixed in a particular viewing mode.
+                </Paragraph>
+                <Paragraph>
+                    FlowDocumentPageViewer displays flow content in single-page viewing mode, and FlowDocumentScrollViewer displays flow content in continuous-scrolling mode. For more information about available display modes, see FlowDocumentReaderViewingMode.
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentReader>
+
+    </DockPanel>
+</Page>

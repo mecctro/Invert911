@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Invert911.InvertCommon.Modules.Location.Location"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sg="clr-namespace:Invert911.InvertCommon.StandardGui"
+             Height="174" Width="678">
+	<ScrollViewer VerticalScrollBarVisibility="Auto">
+		<Grid>
+            <sg:i9TextBox Height="23" Margin="377,130,0,0" x:Name="LocationRemarksTextBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="278" Text="{Binding Path=LocationRemarks}"/>
+            <sg:i9ComboBox Height="23" Margin="94,32,0,0" x:Name="PredirectioTextBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" Text="{Binding Path=StreetPredirection}"/>
+            <sg:i9Label HorizontalAlignment="Left" Margin="377,104,0,0" x:Name="LocationRemarksLabel" Width="120" Height="26" VerticalAlignment="Top">Location Remarks</sg:i9Label>
+            <sg:i9Label Height="26" HorizontalAlignment="Left" Margin="96,6,0,0" x:Name="PredirectionLabel" VerticalAlignment="Top">Predirection</sg:i9Label>
+            <sg:i9Label HorizontalAlignment="Left" Margin="3,55,0,0" x:Name="CityLabel" Height="26" VerticalAlignment="Top">City</sg:i9Label>
+            <sg:i9ComboBox Margin="188,81,0,0" x:Name="StateComboBox" HorizontalAlignment="Left" Width="80" Height="23" VerticalAlignment="Top" Text="{Binding Path=StateCode}" />
+            <sg:i9ComboBox Margin="6,81,0,0" x:Name="CityTextBox" HorizontalAlignment="Left" Width="172" Height="23" VerticalAlignment="Top" Text="{Binding Path=City}" />
+            <sg:i9TextBox Margin="274,81,0,0" x:Name="ZipTextBox" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="81" Text="{Binding Path=ZipCode}" />
+            <sg:i9Label HorizontalAlignment="Left" Margin="189,55,0,0" x:Name="StateLabel" Width="80" Height="26" VerticalAlignment="Top">State</sg:i9Label>
+            <sg:i9Label Margin="275,55,0,0" x:Name="ZipLabel" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="58">Zip</sg:i9Label>
+            <sg:i9ComboBox Margin="481,81,0,0" x:Name="BeatComboBox" HorizontalAlignment="Left" Width="82" Height="23" VerticalAlignment="Top" Text="{Binding Path=Beat}" />
+            <sg:i9Label HorizontalAlignment="Left" Margin="481,55,0,0" x:Name="BeatLabel" Width="81" Height="26" VerticalAlignment="Top">Beat</sg:i9Label>
+            <sg:i9TextBox Height="23" HorizontalAlignment="Left" Margin="3,130,0,0" x:Name="comboBox3" VerticalAlignment="Top" Width="82" Text="{Binding Path=Latitude}"  />
+            <sg:i9TextBox Height="23" HorizontalAlignment="Left" Margin="91,130,0,0" x:Name="comboBox4" VerticalAlignment="Top" Width="82" Text="{Binding Path=Longitude}" />
+            <sg:i9TextBox Height="23" HorizontalAlignment="Left" Margin="179,130,0,0" x:Name="HighwayTextBox" VerticalAlignment="Top" Width="82"  Text="{Binding Path=Highway}" />
+            <sg:i9ComboBox Height="23" Margin="267,130,0,0" x:Name="comboBox6" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104" Text="{Binding Path=MileMarker}" />
+            <sg:i9Label HorizontalAlignment="Left" Margin="4,106,0,0" x:Name="LatitudeLabel" Width="80" Height="26" VerticalAlignment="Top">Latitude</sg:i9Label>
+            <sg:i9Label HorizontalAlignment="Left" Margin="94,106,0,0" x:Name="LongitudeLabel" Width="80" Height="26" VerticalAlignment="Top">Longitude</sg:i9Label>
+            <sg:i9Label HorizontalAlignment="Left" Margin="180,106,0,0" x:Name="HighwayLabel" Width="80" Height="26" VerticalAlignment="Top">Highway</sg:i9Label>
+            <sg:i9Label Margin="267,106,0,0" x:Name="MileMarkerLabel" VerticalAlignment="Top" HorizontalAlignment="Left">Mile Marker</sg:i9Label>
+            <sg:i9TextBox Height="23" HorizontalAlignment="Left" Margin="189,32,0,0" x:Name="StreetNameTextBox" VerticalAlignment="Top" Width="190" Text="{Binding Path=StreetName}" />
+            <sg:i9Label Content="Street Name" Height="26" Margin="189,6,0,0" x:Name="StreetNameLabel" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <sg:i9Label Content="Street Type" HorizontalAlignment="Left" Margin="381,6,0,0" x:Name="StreetTypeLabel" VerticalAlignment="Top" />
+            <sg:i9Label Content="Street Number" Height="26" HorizontalAlignment="Left" Margin="1,6,0,0" x:Name="StreetNumberLabel" VerticalAlignment="Top" />
+            <sg:i9ComboBox Height="23" HorizontalAlignment="Left" Margin="385,32,0,0" x:Name="StreetTypeComboBox" VerticalAlignment="Top" Width="96" Text="{Binding Path=StreetType}" />
+            <sg:i9Label Content="Postdirection" Height="26" HorizontalAlignment="Left" Margin="489,6,0,0" x:Name="label1" VerticalAlignment="Top" />
+            <sg:i9TextBox Height="23" HorizontalAlignment="Left" Margin="4,32,0,0" x:Name="StreetNumberextBox" VerticalAlignment="Top" Width="81"  Text="{Binding Path=StreetNumber}"/>
+            <sg:i9ComboBox Height="23" HorizontalAlignment="Left" Margin="487,32,0,0" x:Name="PostdirectionComboBox" VerticalAlignment="Top" Width="81" Text="{Binding Path=StreetPostdirection}" />
+            <sg:i9Label Content="Apartment" Height="26" HorizontalAlignment="Left" Margin="576,6,0,0" x:Name="ApartmentLabel" VerticalAlignment="Top" />
+            <sg:i9TextBox Height="23" HorizontalAlignment="Left" Margin="574,32,0,0" x:Name="ApartmenTextBox" VerticalAlignment="Top" Width="81" Text="{Binding Path=Apartment}"/>
+            <sg:i9Label Content="Lot Number" Height="26" HorizontalAlignment="Left" Margin="571,55,0,0" x:Name="LotNumberLabel" VerticalAlignment="Top" Width="79" />
+            <sg:i9TextBox Height="23" HorizontalAlignment="Left" Margin="569,81,0,0" x:Name="LotNumberTextBox" VerticalAlignment="Top" Width="86" Text="{Binding Path=LotNumber}"/>
+            <sg:i9ComboBox Height="23" HorizontalAlignment="Left" Margin="359,81,0,0" x:Name="LocationTypeComboBox" VerticalAlignment="Top" Width="116" Text="{Binding Path=LocationTypeCode}"  />
+            <sg:i9Label Content="Location Type" Height="26" HorizontalAlignment="Left" Margin="359,55,0,0" x:Name="LocationTypeLabel" VerticalAlignment="Top" />
+        </Grid>
+	</ScrollViewer>
+</UserControl>

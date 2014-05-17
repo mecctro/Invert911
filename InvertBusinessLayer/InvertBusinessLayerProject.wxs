@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="InvertBusinessLayer.Binaries" />
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertBusinessLayer.Binaries">
+            <ComponentRef Id="cmp720FD1F45A4963BA3700F5CE6F77DFC1" />
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="InvertBusinessLayer.Content">
+            <Directory Id="dir4DD2EFBDCFA361B2AC7547D6E1EED7DA" Name="Database" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertBusinessLayer.Content">
+            <ComponentRef Id="cmpFA43A2F9875350F0A387703E47E44836" />
+            <ComponentRef Id="cmp7B9BC1DB721EA2B8384B13FA0BE17BAC" />
+            <ComponentRef Id="cmp7E87977D49AD4B461E4883F92B35B5E3" />
+            <ComponentRef Id="cmp8863F2589FF11410213374191FCBECB9" />
+            <ComponentRef Id="cmp400B121FA70C96588BDA15BBD249E717" />
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertBusinessLayer.Documents" />
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="InvertBusinessLayerBinaries">
+            <Component Id="cmp720FD1F45A4963BA3700F5CE6F77DFC1" Directory="InvertBusinessLayer.Binaries" Guid="*">
+                <File Id="filB64C10CC06E899FF8716AC985641C787" Source="$(var.InvertBusinessLayer.TargetDir)\Invert911.InvertBusinessLayer.dll" />
+            </Component>
+            <Component Id="cmpFA43A2F9875350F0A387703E47E44836" Directory="dir4DD2EFBDCFA361B2AC7547D6E1EED7DA" Guid="*">
+                <File Id="fil221305143570AADF44AB14127BC9FB6F" Source="$(var.InvertBusinessLayer.ProjectDir)\Database\i9Script_00003.sql" />
+            </Component>
+            <Component Id="cmp7B9BC1DB721EA2B8384B13FA0BE17BAC" Directory="dir4DD2EFBDCFA361B2AC7547D6E1EED7DA" Guid="*">
+                <File Id="filA52D24EB6F8621CA4ABC72989FF92D95" Source="$(var.InvertBusinessLayer.ProjectDir)\Database\i9Script_00002.sql" />
+            </Component>
+            <Component Id="cmp7E87977D49AD4B461E4883F92B35B5E3" Directory="dir4DD2EFBDCFA361B2AC7547D6E1EED7DA" Guid="*">
+                <File Id="fil9FAE01A30B61D1580F5975E9ED066A44" Source="$(var.InvertBusinessLayer.ProjectDir)\Database\i9Script_SampleCodes.sql" />
+            </Component>
+            <Component Id="cmp8863F2589FF11410213374191FCBECB9" Directory="dir4DD2EFBDCFA361B2AC7547D6E1EED7DA" Guid="*">
+                <File Id="filF502731F6F8F188074FE08330965E4D5" Source="$(var.InvertBusinessLayer.ProjectDir)\Database\i9Script_00001.sql" />
+            </Component>
+            <Component Id="cmp400B121FA70C96588BDA15BBD249E717" Directory="dir4DD2EFBDCFA361B2AC7547D6E1EED7DA" Guid="*">
+                <File Id="fil624695AFAFD39C4A638BB6C4289295C0" Source="$(var.InvertBusinessLayer.ProjectDir)\Database\SQLNotes.txt" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

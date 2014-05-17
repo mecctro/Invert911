@@ -1,0 +1,19 @@
+﻿<Page x:Class="Invert911.MDT.MainMenuPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MainMenuPage" ShowsNavigationUI="True" Loaded="Page_Loaded"   >
+    <DockPanel LastChildFill="True"  >
+        <DockPanel LastChildFill="True" MinWidth="100" Name="MenuDockPanel">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" >
+                <Image DockPanel.Dock="Top" Height="25" Source="/Invert911.InvertCommon;component/Images/Monitor.png"></Image>
+                <TextBlock TextAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="16">Invert 911</TextBlock>
+            </StackPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Name="NavigationStackPanel">
+                </StackPanel>
+            </ScrollViewer>
+        </DockPanel>
+        <Separator></Separator>
+        <Frame Name="MainFrame" MinWidth="100" MinHeight="100"></Frame>
+    </DockPanel>
+</Page>

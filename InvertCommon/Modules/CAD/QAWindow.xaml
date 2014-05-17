@@ -1,0 +1,15 @@
+﻿<Window x:Class="Invert911.CAD.QAWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="QAWindow" Height="300" Width="300">
+    <Grid>
+        <ListView >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="QA Type"/>
+                    <GridViewColumn Header="Description"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

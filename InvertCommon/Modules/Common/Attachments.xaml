@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="Invert911.InvertCommon.Modules.Attachments"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mod="clr-namespace:Invert911.InvertCommon.Modules"
+        xmlns:sg="clr-namespace:Invert911.InvertCommon.StandardGui"
+        Height="262" 
+        Width="743">
+    <Grid>
+        <DockPanel >
+            
+            <StackPanel DockPanel.Dock="Left" Orientation="Vertical">
+                <Button x:Name="AttachmentNew" MinHeight="40" Width="80" Click="AttachmentNew_Click" Content="New" />
+                <Button x:Name="AttachmentRemove" MinHeight="40" Width="80" Margin="0,5,0,0"  Click="AttachmentRemove_Click"  Content="Remove" />
+                <Button x:Name="AttachmentOpen" MinHeight="40" Width="80" Margin="0,5,0,0" Click="AttachmentOpen_Click"  Content="Open" />
+                <Button x:Name="AttachmentDataAdd" Visibility="Collapsed"   Margin="0,5,0,0"  MinHeight="40" Width="80" Content="Add File" />
+                <Button x:Name="AttachmentDataRemove" Visibility="Collapsed" MinHeight="40" Margin="0,5,0,0" Width="80"  Content="Remove File" />
+            </StackPanel>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" DockPanel.Dock="Bottom" MinHeight="55">
+                <WrapPanel Name="MainWrapPanel" >
+                    <StackPanel Margin="0,0,4,0" Orientation="Vertical" >
+                        <sg:i9Label x:Name="NameLabel" >Name</sg:i9Label>
+                        <sg:i9TextBox  x:Name="AttachmentNameTextBox" Width="100" IsReadOnly="True" Text="{Binding Path=AttachmentName}" />
+                    </StackPanel>
+                    <StackPanel Margin="0,0,4,0" Orientation="Vertical" >
+                        <sg:i9Label x:Name="NotesLabel" >Notes</sg:i9Label>
+                        <sg:i9TextBox   x:Name="AttachmentNotesTextBox" Width="100" Text="{Binding  Path=AttachmentNotes}"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,0,4,0" Orientation="Vertical" >
+                        <sg:i9Label x:Name="CapturedateLabel" >Capturedate</sg:i9Label>
+                        <sg:i9TextBox x:Name="CapturedateTextBox" MinWidth="100" IsReadOnly="True" Text="{Binding Path=Capturedate}" />
+                    </StackPanel>
+                    <StackPanel Margin="0,0,4,0" Orientation="Vertical" >
+                        <sg:i9Label x:Name="ImageTypeCodeLabel" >Image Type</sg:i9Label>
+                        <sg:i9ComboBox IsEditable="True"  x:Name="ImageTypeCodeComboBox" Width="100" IsReadOnly="True" Text="{Binding  Path=ImageTypeCode}"/>
+                    </StackPanel>
+                </WrapPanel>
+            </ScrollViewer>
+            
+            <GroupBox Header="Preview" DockPanel.Dock="Right" MinWidth="220" Visibility="Collapsed">
+                <Image Width="Auto" x:Name="AttachmentImage"></Image>
+            </GroupBox>
+
+            <ListView x:Name="AttachmentListView" MinHeight="60" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" SelectionMode="Single">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="180" Header="Name" DisplayMemberBinding= "{Binding AttachmentName}" />
+                        <GridViewColumn Width="180" Header="Notes" DisplayMemberBinding= "{Binding AttachmentNotes}"/>
+                        <GridViewColumn Width="180" Header="Capturedate" DisplayMemberBinding= "{Binding Capturedate}"/>
+                        <GridViewColumn Width="180" Header="Image Type" DisplayMemberBinding= "{Binding ImageTypeCode}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </DockPanel>
+        
+    </Grid>
+</UserControl>

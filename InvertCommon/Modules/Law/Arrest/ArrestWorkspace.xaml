@@ -1,0 +1,15 @@
+﻿<Page x:Class="Invert911.Arrest.ArrestWorkspace"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Arrest" ShowsNavigationUI="True">
+    <Grid>
+        <ListView >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Item"/>
+                    <GridViewColumn Header="Description"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

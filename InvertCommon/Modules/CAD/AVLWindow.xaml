@@ -1,0 +1,8 @@
+﻿<Window x:Class="Invert911.CAD.AVLWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="AVLPage" >
+    <Grid>
+        <WebBrowser Source="http://www.bing.com/maps"></WebBrowser>
+    </Grid>
+</Window>

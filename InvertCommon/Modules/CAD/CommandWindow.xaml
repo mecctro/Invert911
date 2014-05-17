@@ -1,0 +1,12 @@
+﻿<Window x:Class="Invert911.CAD.CommandWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="CommandWindow" Height="300" Width="300">
+    <DockPanel LastChildFill="True">
+        <DockPanel LastChildFill="True" DockPanel.Dock="Bottom">
+            <Label DockPanel.Dock="Left"></Label>
+            <TextBlock></TextBlock>
+        </DockPanel>
+        <TextBox></TextBox>
+    </DockPanel>
+</Window>

@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Invert911.Gang.GangMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="412" Width="682">
+    <DockPanel  LastChildFill="True">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel  Orientation="Vertical" DockPanel.Dock="Left">
+                <Label HorizontalAlignment="Center" Height="25" Width="70" Name="MenuLabel" Foreground="Black" Background="LightSalmon">Menu:</Label>
+                <Button Height="70" Width="70" Name="NewButtom" Click="NewButtom_Click">New</Button>
+                <Button Height="70" Width="70" Name="OpenButtom">Open</Button>
+                <Button Height="70" Width="70" Name="PrintButtom">Print</Button>
+                <Button Height="70" Width="70" Name="RouteButtom">Route</Button>
+                <Button Height="70" Width="70" Name="SearchButtom">Search</Button>
+            </StackPanel>
+        </ScrollViewer>
+        <ListView >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn  Width="120" Header="Gang Name " />
+                    <GridViewColumn Width="420" Header="Location" DisplayMemberBinding="{Binding Year}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</UserControl>

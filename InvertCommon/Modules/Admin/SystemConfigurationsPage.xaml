@@ -1,0 +1,22 @@
+﻿<Page x:Class="Invert911.Admin.SystemConfigurationsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="321" Width="543" Loaded="Page_Loaded" ShowsNavigationUI="True">
+    <Grid>
+        <DockPanel>
+            <GroupBox DockPanel.Dock="Top" Header="Theme" Name="groupBox1" Height="62" >
+                <!--<StackPanel Orientation="Horizontal" x:Name="ThemeStackPanel">
+                    <Button>xwsxws</Button>
+                </StackPanel>-->
+                <Canvas>
+					<TextBlock Height="20" Text="Theme: " Width="40" Canvas.Left="15" Canvas.Top="14" />
+					<ComboBox Height="20" Name="ThemesComboBox" SelectedIndex="0" Width="120" Canvas.Left="61" Canvas.Top="11" />
+					<Button Height="25" Name="SetThemeButton" Width="60" Canvas.Left="187" Canvas.Top="9" Click="SetThemeButton_Click">Set</Button>
+				</Canvas>
+            </GroupBox>
+            <GroupBox DockPanel.Dock="Top" Header="General" Name="groupBox2" >
+                <Grid></Grid>
+			</GroupBox>
+        </DockPanel >
+    </Grid>
+</Page>

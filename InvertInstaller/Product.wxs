@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+>
+  
+  <Product Id="*" Name="Invert911" Language="1033" Version="1.1.2.0" Manufacturer="Invert911" UpgradeCode="f95f9829-1ee3-4d5c-971e-57c98b41802e">
+    <Package  InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of Invert911 is already installed."  />
+    <MediaTemplate EmbedCab="yes"    />
+
+    <Feature Id="ProductFeature" Title="Invert911Installer" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="ShortcutsComponents" />   
+      <!--<ComponentGroupRef Id="InvertCommonBinaries"/>
+      <ComponentGroupRef Id="InvertClientBinaries"/>
+      <ComponentGroupRef Id="InvertBusinessLayerBinaries"/>-->
+    </Feature>
+    
+    <UIRef Id="WixUI_Minimal" />
+  </Product>
+
+  
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="DesktopFolder" Name="Desktop" />
+
+      <Directory Id="ProgramMenuFolder" Name="Programs"></Directory>
+
+      <Directory Id="ProgramFilesFolder" >
+          <Directory Id="INSTALLFOLDER" Name="Invert911" >
+              <Directory Id="x86Folder" Name="x86"/>
+              <Directory Id="x64Folder" Name="x64"/>
+              <Directory Id="Database" Name="Database"/>
+              <Directory Id="Documentation" Name="Documentation"/>
+              <Directory Id="Reports" Name="Reports" >
+                  <Directory Id="LawIncident" Name="LawIncident" >
+                       <Directory Id="CHP555" Name="CHP555" />
+                       <Directory Id="DeltaReports" Name="DeltaReports" />
+                  </Directory>
+              </Directory>
+          </Directory>
+      </Directory>
+
+    </Directory>
+  </Fragment>
+
+
+  <Fragment>
+   
+    <ComponentGroup Id="ProductComponents" >
+      
+      <Component Id="MainExecutable" Directory="INSTALLFOLDER">
+        <File Id='Invert911EXE' Name="$(var.InvertClient.TargetFileName)"  Source="$(var.InvertClient.TargetPath)" >          
+          <Shortcut Id='StartMenuInvert911' Directory='ProgramMenuFolder' Name='Invert911' WorkingDirectory='INSTALLDIR' Arguments='Standalone' Advertise='yes' Icon='Invert911Icon.exe' />
+          <Shortcut Id='DesktopInvert911' Directory='DesktopFolder' Name='Invert911' WorkingDirectory='INSTALLDIR'  Arguments='Standalone' Advertise='yes' Icon='Invert911Icon.exe' />
+        </File>
+      </Component>
+
+      <Component Id="InvertClientCloudExe" Directory="INSTALLFOLDER">
+        <File Id='InvertClientCloudExe' Name="$(var.InvertClientCloud.TargetFileName)"  Source="$(var.InvertClientCloud.TargetPath)" >
+          <Shortcut Id='StartMenuInvert911Cloud' Directory='ProgramMenuFolder' Name='Invert911 Clound' WorkingDirectory='INSTALLDIR'  Advertise='yes' Icon='CloudIcon.exe' />
+          <Shortcut Id='DesktopInvert911Cloud' Directory='DesktopFolder' Name='Invert911 Cloud' WorkingDirectory='INSTALLDIR'  Advertise='yes' Icon='CloudIcon.exe' />
+        </File>
+      </Component>
+
+      <!--<Component Id="PolicePadExe" Directory="INSTALLFOLDER">
+        <File Id='InvertClientLiteExe' Name="$(var.PolicePad.TargetFileName)"  Source="$(var.PolicePad.TargetPath)" >
+          <Shortcut Id='StartMenuPolicePad Directory='ProgramMenuFolder' Name='Police Pad' WorkingDirectory='INSTALLDIR' Advertise='yes' Icon='PolicePadIcon.exe' />
+          <Shortcut Id='DesktopPolicePad' Directory='DesktopFolder' Name='Police Pad' WorkingDirectory='INSTALLDIR'   Advertise='yes' Icon='PolicePadIcon.exe' />
+        </File>
+      </Component>-->
+
+      <Component  Guid="*" Directory="x64Folder">  
+        <File Id="InvertClient.x64SQLiteDependancy"
+              Name="SQLite.Interop.dll"
+              Source="$(var.InvertClient.TargetDir)\x64\SQLite.Interop.dll"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Id="cmp_InvertClient.x86SQLiteDependancy" Directory="x86Folder">
+        <File Id="InvertClient.x86SQLiteDependancy"
+              Name="SQLite.Interop.dll"
+              Source="$(var.InvertClient.TargetDir)\x86\SQLite.Interop.dll"
+              KeyPath="yes" />
+      </Component>
+
+      <!--Documentation-->
+      <Component Id="cmp_InvertCommon.DocumentationDependancy" Directory="Documentation">
+         <File Id="fil_InvertCommon.DocumentationDependancy"
+            Name="Invert911UserGuide.pdf"
+            Source="$(var.InvertCommon.TargetDir)\Documentation\Invert911UserGuide.pdf"
+            KeyPath="yes" />
+      </Component>
+      
+      <!--Delta Reports-->
+      <Component Id="cmp_ArrestReport.pdf" Directory="DeltaReports">
+        <File Id="file_ArrestReport.pdf"
+              Name="ArrestReport.pdf"
+              Source="$(var.InvertCommon.TargetDir)\Reports\LawIncident\DeltaReports\ArrestReport.pdf"
+              KeyPath="yes" />
+      </Component>
+      
+      <Component Id="cmp_ContinuationPage.pdf" Directory="DeltaReports">
+        <File Id="file_ContinuationPage.pdf"
+              Name="ContinuationPage.pdf"
+              Source="$(var.InvertCommon.TargetDir)\Reports\LawIncident\DeltaReports\ContinuationPage.pdf"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Id="cmp_IncidentReport.pdf" Directory="DeltaReports">
+        <File Id="file_IncidentReport.pdf"
+              Name="IncidentReport.pdf"
+              Source="$(var.InvertCommon.TargetDir)\Reports\LawIncident\DeltaReports\IncidentReport.pdf"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Id="cmp_Supplemental.pdf" Directory="DeltaReports">
+        <File Id="file_Supplemental.pdf"
+              Name="Supplemental.pdf"
+              Source="$(var.InvertCommon.TargetDir)\Reports\LawIncident\DeltaReports\Supplemental.pdf"
+              KeyPath="yes" />
+      </Component>
+      
+      
+      
+      
+      <Component Directory="INSTALLFOLDER">
+        <File Id="InvertClient.SQLiteDependancy"
+              Name="System.Data.SQLite.dll"
+              Source="$(var.InvertClient.TargetDir)\System.Data.SQLite.dll"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Directory="INSTALLFOLDER">
+        <File Id="InvertClient.LinqSQLiteDependancy"
+              Name="System.Data.SQLite.Linq.dll"
+              Source="$(var.InvertClient.TargetDir)\System.Data.SQLite.Linq.dll"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Directory="INSTALLFOLDER">
+        <File Id="InvertClient.WPFThemesDependancy"
+              Name="WPF.Themes.dll"
+              Source="$(var.InvertClient.TargetDir)\WPF.Themes.dll"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Directory="INSTALLFOLDER">
+        <File Id="InvertClient.ExeConfigDependancy"
+              Name="Invert911.exe.config"
+              Source="$(var.InvertClient.TargetDir)\Invert911.exe.config"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Directory="INSTALLFOLDER">
+        <File Id="InvertClient.itextsharpDependancy"
+              Name="itextsharp.dll"
+              Source="$(var.InvertClient.TargetDir)\itextsharp.dll"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Directory="INSTALLFOLDER">
+        <File Id="InvertClient.ApplicationBlocksDependancy"
+              Name="Microsoft.ApplicationBlocks.Data.dll"
+              Source="$(var.InvertClient.TargetDir)\Microsoft.ApplicationBlocks.Data.dll"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Directory="INSTALLFOLDER">
+        <File Id="Fil_Invert911_DB_Dependancy"
+              Name="Invert911.mdf"
+              Source="C:\Dev\PoliceRecords\InvertBusinessLayer\Database\ReleaseDatabase\Invert911.mdf"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Directory="INSTALLFOLDER">
+        <File Id="Fil_Invert911_log_DB_Dependancy"
+              Name="Invert911_log.LDF"
+              Source="C:\Dev\PoliceRecords\InvertBusinessLayer\Database\ReleaseDatabase\Invert911_log.LDF"
+              KeyPath="yes" />
+      </Component>
+       
+      <Component Directory="INSTALLFOLDER" >
+        <File Id="InvertClient.InvertCommonXmlSerializersDependancy"
+              Name="Invert911.InvertCommon.XmlSerializers.dll"
+              Source="$(var.InvertClient.TargetDir)\Invert911.InvertCommon.XmlSerializers.dll"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Directory="INSTALLFOLDER">
+        <File Id="InvertClient.EntityFrameworkDependancy"
+              Name="EntityFramework.dll"
+              Source="$(var.InvertClient.TargetDir)\EntityFramework.dll"
+              KeyPath="yes" />
+      </Component>
+      
+      <Component Directory="INSTALLFOLDER">
+        <File Id="InvertClient.WPFToolkitDependancy"
+              Name="WPFToolkit.dll"
+              Source="$(var.InvertClient.TargetDir)\WPFToolkit.dll"
+              KeyPath="yes" />
+      </Component>
+      
+      <Component Directory="INSTALLFOLDER">
+        <File Id="InvertBusinessLayer.Output"
+              Name="$(var.InvertBusinessLayer.TargetFileName)"
+              Source="$(var.InvertBusinessLayer.TargetPath)"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Directory="INSTALLFOLDER">
+        <File Id="InvertCommon.Output"
+              Name="$(var.InvertCommon.TargetFileName)"
+              Source="$(var.InvertCommon.TargetPath)"
+              KeyPath="yes" />
+      </Component>
+
+      <Component Directory="INSTALLFOLDER">
+        <File Id="InvertWeb.Output"
+              Name="$(var.InvertWeb.TargetFileName)"
+              Source="$(var.InvertWeb.TargetPath)"
+              KeyPath="yes" />
+      </Component>
+
+    </ComponentGroup>
+
+    <ComponentGroup Id='ShortcutsComponents' Directory='ProgramMenuFolder'>
+      <Component Id="ProgramMenuShortcut">
+        <RemoveFolder Id='ProgramMenuDir' On='uninstall' />
+        <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Value='' KeyPath='yes' />
+      </Component>
+    </ComponentGroup>
+
+  </Fragment>
+
+  <Fragment>
+    <Icon Id="Invert911Icon.exe" SourceFile="$(var.InvertClient.TargetPath)"/>
+    <Icon Id="CloudIcon.exe" SourceFile="$(var.InvertClientCloud.TargetPath)"/>
+    <Icon Id="PolicePadIcon.exe" SourceFile="$(var.PolicePad.TargetPath)"/>
+  </Fragment>
+
+
+</Wix>

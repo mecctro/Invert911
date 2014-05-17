@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Invert911.InvertCommon.Modules.Location.Locations"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:l="clr-namespace:Invert911.InvertCommon.Modules.Location"
+    Height="263" Width="805" Loaded="UserControl_Loaded">
+    <DockPanel LastChildFill="True" >
+        <DockPanel DockPanel.Dock="Top" >
+            <StackPanel DockPanel.Dock="Left" MinWidth="90">
+                <Label Height="10"></Label>
+                <Button x:Name="AddLocationButton" Click="AddLocationButton_Click">Add</Button>
+                <Label Height="10"></Label>
+                <Button x:Name="RemoveLocationButton" Click="RemoveLocationButton_Click">Remove</Button>
+            </StackPanel>
+            <ListView x:Name="LocationListView" DockPanel.Dock="Top" Height="105" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" SelectionMode="Single">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="140" Header="Location Type" DisplayMemberBinding= "{Binding LocationTypeCode}"/>
+                        <GridViewColumn Width="140" Header="Street Number" DisplayMemberBinding= "{Binding StreetNumber}"/>
+                        <GridViewColumn Width="140" Header="Street Name" DisplayMemberBinding= "{Binding StreetName}"/>
+                        <GridViewColumn Width="140" Header="Street Type" DisplayMemberBinding= "{Binding StreetType}"/>
+                        <GridViewColumn Width="140" Header="Predirection" DisplayMemberBinding= "{Binding StreetPredirection}"/>
+                        <GridViewColumn Width="140" Header="Postdirection" DisplayMemberBinding= "{Binding StreetPostdirection}"/>
+                        <GridViewColumn Width="140" Header="City" DisplayMemberBinding= "{Binding City}"/>
+                        <GridViewColumn Width="140" Header="State" DisplayMemberBinding= "{Binding StateCode}"/>
+                        <GridViewColumn Width="140" Header="Zip" DisplayMemberBinding= "{Binding ZipCode}"/>
+                        <GridViewColumn Width="140" Header="Beat" DisplayMemberBinding= "{Binding Beat}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </DockPanel>
+		<!--<l:Location Width="Auto" Height="Auto"></l:Location>-->
+        <l:LocationDynControl x:Name="MainLocationDynControl" Width="Auto" MinHeight="40"></l:LocationDynControl>
+    </DockPanel>
+</UserControl>

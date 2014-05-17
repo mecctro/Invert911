@@ -1,0 +1,23 @@
+﻿
+-----------------------------------------------------------------------------------
+To Do List:
+-----------------------------------------------------------------------------------
+
+*  Test Code Cache
+*  Security Module - Security Groups and Settings
+*  Develop the Dynamic Entry Admin Module
+*  Develop and Setup the FR Dynamic Entry
+	* People
+	* FR General
+	* Vehicle
+*  
+ 
+
+Programming Notes:
+
+-----------------------------------------------------------------------------------
+2010-01-10 Sunday:
+-----------------------------------------------------------------------------------
+1.  Added Page navagation to the ModuleManager.cs class - this gives the abilities 
+    navigate from one page to another and keep the information on the other page
+2.  

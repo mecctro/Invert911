@@ -1,0 +1,1394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66FAB28A-4EEA-45EE-8433-A68D1207B498}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Invert911.InvertCommon</RootNamespace>
+    <AssemblyName>Invert911.InvertCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.4.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\ExternalFiles\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="PresentationFramework.Luna" />
+    <Reference Include="PresentationFramework.Royale" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SQLite, Version=1.0.90.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.1.0.90.0\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.90.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.1.0.90.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationTypes">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPF.Themes">
+      <HintPath>..\ExternalFiles\WPF.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalFiles\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataTypes\DataClasses\i9Agency.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Arrest.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9ArrestReport.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Attachment.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9AttachmentData.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9AttachmentLink.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9AVL.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9AVLEvent.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9AVLHistory.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9CADServiceCall.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9CADServiceCallNarrative.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9CADUnit.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Charge.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Citation.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9ClientTableKey.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Code.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9CodeSet.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9ConfigurationSetting.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9DynamicEntry.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9DynamicEntryConfig.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9DynamicEntryCtrlType.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9DynamicEntryRule.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9EmailAddress.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9EmailModule.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Event.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9EventType.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9FieldContact.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Gang.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9LawIncident.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9LawIncidentReport.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Location.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9MessageInbox.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>i9Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>i9Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Module.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9ModuleReportNumber.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9ModuleSection.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9ModusOperandi.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Narrative.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Offense.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Organization.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9OtherContactInformation.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9OtherInvolvedPerson.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Package.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PackageMetadata.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Pawn.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Permission.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Person.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PersonArrestee.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PersonMissing.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PersonPhoto.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PersonRelated.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PersonSMT.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PersonSubject.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PersonVehicle.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PersonVictim.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PhoneNumber.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Property.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PropertyEvidence.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PropertyExplosive.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PropertyFirearm.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PropertyHazardousMaterial.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PropertyImage.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9PropertySecurities.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9RelatedRecord.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9SecurityGroup.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9SecurityGroupModule.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9SecurityGroupTask.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9SecurityTask.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9SolvabilityFactor.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Structure.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9SysLog.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9SysPersonnel.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9SysPersonnelAddress.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9SysPersonnelAssignment.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9SysPersonnelPhone.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9TableKey.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Vehicle.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9VehicleRecovery.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9VehicleTowed.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\i9Warrant.cs">
+      <DependentUpon>i9Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypes\DataClasses\LawIncidentType.cs" />
+    <Compile Include="DataTypes\DataClasses\xNode.cs" />
+    <Compile Include="DataTypes\DataClasses\xNodes.cs" />
+    <Compile Include="DataTypes\LocalDocuments\Invert911Document.cs" />
+    <Compile Include="Framework\ClientData\ClientDataAccess.cs" />
+    <Compile Include="Framework\ClientData\ClientDataAccessScript.cs" />
+    <Compile Include="Framework\ClientData\SyncSQLCompact.cs" />
+    <Compile Include="Framework\ClientData\SyncSQLite.cs" />
+    <Compile Include="Framework\ClientData\DBSync\ColumnSchema.cs" />
+    <Compile Include="Framework\ClientData\DBSync\DatabaseSchema.cs" />
+    <Compile Include="Framework\ClientData\DBSync\ForeignKeySchema.cs" />
+    <Compile Include="Framework\ClientData\DBSync\IndexSchema.cs" />
+    <Compile Include="Framework\ClientData\DBSync\SqlServerToSQLite.cs" />
+    <Compile Include="Framework\ClientData\DBSync\TableSchema.cs" />
+    <Compile Include="Framework\ClientData\DBSync\TriggerBuilder.cs" />
+    <Compile Include="Framework\ClientData\DBSync\TriggerSchema.cs" />
+    <Compile Include="Framework\ClientData\DBSync\ViewSchema.cs" />
+    <Compile Include="Framework\Communication\i9MessageSecurity.cs" />
+    <Compile Include="Framework\Communication\i9MessageManager.cs" />
+    <Compile Include="Framework\Enums.cs" />
+    <Compile Include="Framework\Interfaces\IMainWindow.cs" />
+    <Compile Include="Framework\Interfaces\IMDTModule.cs" />
+    <Compile Include="Framework\Interfaces\Ii9MessageManager.cs" />
+    <Compile Include="Framework\Communication\i9EnumTypes.cs" />
+    <Compile Include="Framework\Communication\i9MessageError.cs" />
+    <Compile Include="Framework\Communication\WebServiceUtilities.cs" />
+    <Compile Include="Framework\StandardGui\i9DatePicker.cs" />
+    <Compile Include="Framework\StandardGui\i9MultiComboBox.cs" />
+    <Compile Include="Framework\Utilities\AppCommands.cs" />
+    <Compile Include="Framework\Utilities\FillDataHelper.cs" />
+    <Compile Include="Framework\Utilities\KeyGenerator.cs" />
+    <Compile Include="Framework\Utilities\LogManager.cs" />
+    <Compile Include="Framework\Utilities\NightModeManager.cs" />
+    <Compile Include="Framework\Utilities\NotificationAreaIcon.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\Admin\CreateUserMessage.cs" />
+    <Compile Include="Modules\Admin\CodeAdminPage.xaml.cs">
+      <DependentUpon>CodeAdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Admin\AgencyPage.xaml.cs">
+      <DependentUpon>AgencyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Admin\InterfaceSettingsPage.xaml.cs">
+      <DependentUpon>InterfaceSettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Admin\SystemLogPage.xaml.cs">
+      <DependentUpon>SystemLogPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Admin\PersonnelGroupsPage.xaml.cs">
+      <DependentUpon>PersonnelGroupsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Admin\SystemKeyPage.xaml.cs">
+      <DependentUpon>SystemKeyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\CADServiceCall.xaml.cs">
+      <DependentUpon>CADServiceCall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\DispatchWindow.xaml.cs">
+      <DependentUpon>DispatchWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Arrest\Arrests.xaml.cs">
+      <DependentUpon>Arrests.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Attachments.xaml.cs">
+      <DependentUpon>Attachments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\DynamicEntry\DynamicEntrySetpPage.xaml.cs">
+      <DependentUpon>DynamicEntrySetpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\DynamicEntry\DynamicRule.cs" />
+    <Compile Include="Modules\Common\DynamicEntry\DynamicRules.cs" />
+    <Compile Include="Modules\Common\DynamicEntry\RulesValidation.cs" />
+    <Compile Include="Modules\Common\DynamicEntry\ValidationManager.cs" />
+    <Compile Include="Modules\Common\Links.xaml.cs">
+      <DependentUpon>Links.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\AttachmentDynControl.cs" />
+    <Compile Include="Modules\Common\Person\PersonSMTs.xaml.cs">
+      <DependentUpon>PersonSMTs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Person\PersonSMTDynControl.cs" />
+    <Compile Include="Modules\Common\Person\PersonAKADynControl.cs" />
+    <Compile Include="Modules\Common\Person\PersonAKAs.xaml.cs">
+      <DependentUpon>PersonAKAs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Location\Location.xaml.cs">
+      <DependentUpon>Location.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Location\LocationDynControl.cs" />
+    <Compile Include="Modules\Common\Location\Locations.xaml.cs">
+      <DependentUpon>Locations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Narrative.xaml.cs">
+      <DependentUpon>Narrative.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Offense.xaml.cs">
+      <DependentUpon>Offense.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Person\Person.xaml.cs">
+      <DependentUpon>Person.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Person\PersonDetailDynControl.cs" />
+    <Compile Include="Modules\Common\Person\Persons.xaml.cs">
+      <DependentUpon>Persons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Arrest\Arrest.xaml.cs">
+      <DependentUpon>Arrest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Property\Properties.xaml.cs">
+      <DependentUpon>Properties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Property\Property.xaml.cs">
+      <DependentUpon>Property.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Admin\DynamicEntryAdminPage.xaml.cs">
+      <DependentUpon>DynamicEntryAdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Property\PropertyDynControl.cs" />
+    <Compile Include="Modules\Common\Vehicle\Vehicle.xaml.cs">
+      <DependentUpon>Vehicle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Vehicle\VehicleDynControl.cs" />
+    <Compile Include="Modules\Common\Vehicle\Vehicles.xaml.cs">
+      <DependentUpon>Vehicles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\DynamicEntry\DynamicEntryControl.xaml.cs">
+      <DependentUpon>DynamicEntryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Common\Linkage.xaml.cs">
+      <DependentUpon>Linkage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\CaseManagement\CaseManagementPage.xaml.cs">
+      <DependentUpon>CaseManagementPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\PolicePad\PolicePadControl.xaml.cs">
+      <DependentUpon>PolicePadControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\PolicePad\PolicePadEntry.xaml.cs">
+      <DependentUpon>PolicePadEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\PolicePad\PolicePadWindow.xaml.cs">
+      <DependentUpon>PolicePadWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\PolicePad\PolicePadMenu.xaml.cs">
+      <DependentUpon>PolicePadMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\PolicePad\PolicePadWorkspace.xaml.cs">
+      <DependentUpon>PolicePadWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Incident\IncidentControl.xaml.cs">
+      <DependentUpon>IncidentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Incident\IncidentDynControl.cs" />
+    <Compile Include="Modules\Main\MainMenuPage.xaml.cs">
+      <DependentUpon>MainMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Communication\i9Message.cs" />
+    <Compile Include="Modules\Admin\ConfidentialityPage.xaml.cs">
+      <DependentUpon>ConfidentialityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Admin\PersonnelPage.xaml.cs">
+      <DependentUpon>PersonnelPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Admin\SchedulePage.xaml.cs">
+      <DependentUpon>SchedulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Admin\SecurityPage.xaml.cs">
+      <DependentUpon>SecurityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Admin\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Admin\SystemConfigurationsPage.xaml.cs">
+      <DependentUpon>SystemConfigurationsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\AVLWindow.xaml.cs">
+      <DependentUpon>AVLWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\BOLO\BOLOWorkspace.xaml.cs">
+      <DependentUpon>BOLOWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\Briefing\BriefingWorkspace.xaml.cs">
+      <DependentUpon>BriefingWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\CommandWindow.xaml.cs">
+      <DependentUpon>CommandWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\EventEntryWindow.xaml.cs">
+      <DependentUpon>EventEntryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\EventsWindow.xaml.cs">
+      <DependentUpon>EventsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\MessageSwitchPage.xaml.cs">
+      <DependentUpon>MessageSwitchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\MessageWindow.xaml.cs">
+      <DependentUpon>MessageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\MobileTerminalPage.xaml.cs">
+      <DependentUpon>MobileTerminalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\QAWindow.xaml.cs">
+      <DependentUpon>QAWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CAD\UnitStatusWindow.xaml.cs">
+      <DependentUpon>UnitStatusWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Arrest\ArrestWorkspace.xaml.cs">
+      <DependentUpon>ArrestWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\BicycleRegistration\BicycleRegistrationPage.xaml.cs">
+      <DependentUpon>BicycleRegistrationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Citation\CitationEntry.xaml.cs">
+      <DependentUpon>CitationEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Citation\CitationMenu.xaml.cs">
+      <DependentUpon>CitationMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Citation\CitationMenuUC.xaml.cs">
+      <DependentUpon>CitationMenuUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Citation\CitationWorkspace.xaml.cs">
+      <DependentUpon>CitationWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Citation\Messages\Citation.cs" />
+    <Compile Include="Modules\Law\Citation\Messages\Citations.cs" />
+    <Compile Include="Modules\Law\Citation\Messages\CitCharge.cs" />
+    <Compile Include="Modules\Law\Citation\Messages\CitCharges.cs" />
+    <Compile Include="Modules\Law\Citation\PartInvolvedUC.xaml.cs">
+      <DependentUpon>PartInvolvedUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\FieldContact\FieldContactEntry.xaml.cs">
+      <DependentUpon>FieldContactEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\FieldContact\FieldContactMenu.xaml.cs">
+      <DependentUpon>FieldContactMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\FieldContact\FieldContactWorkspace.xaml.cs">
+      <DependentUpon>FieldContactWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Gang\GangEntry.xaml.cs">
+      <DependentUpon>GangEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Gang\GangMenu.xaml.cs">
+      <DependentUpon>GangMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Gang\GangWorkspace.xaml.cs">
+      <DependentUpon>GangWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Impound\ImpoundPage.xaml.cs">
+      <DependentUpon>ImpoundPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Incident\IncidentEntry.xaml.cs">
+      <DependentUpon>IncidentEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Incident\IncidentMenu.xaml.cs">
+      <DependentUpon>IncidentMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Incident\IncidentWorkspace.xaml.cs">
+      <DependentUpon>IncidentWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\PawnTickets\PawnTicketsPage.xaml.cs">
+      <DependentUpon>PawnTicketsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\PetRegistration\PetRegistrationPage.xaml.cs">
+      <DependentUpon>PetRegistrationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\PhotoLineUp\PhotoLineUpWorkspace.xaml.cs">
+      <DependentUpon>PhotoLineUpWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\PropertyRoom\PropertyRoomWorkspace.xaml.cs">
+      <DependentUpon>PropertyRoomWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\SexOffender\SexOffenderPage.xaml.cs">
+      <DependentUpon>SexOffenderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Law\Warrant\WarrantWorkspace.xaml.cs">
+      <DependentUpon>WarrantWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Main\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Bind\ListItem.cs" />
+    <Compile Include="Framework\Bind\ListManager.cs" />
+    <Compile Include="Messages\Admin\LoginMessage.cs" />
+    <Compile Include="Messages\Law\IncidentMessage.cs" />
+    <Compile Include="Framework\ClientData\DataAccessUtilities.cs" />
+    <Compile Include="Modules\Main\SplashPage.xaml.cs">
+      <DependentUpon>SplashPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Utilities\AdHocReportControl.xaml.cs">
+      <DependentUpon>AdHocReportControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Utilities\AdHocReportPage.xaml.cs">
+      <DependentUpon>AdHocReportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Utilities\SQLDataBaseDocumentationrPage.xaml.cs">
+      <DependentUpon>SQLDataBaseDocumentationrPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Utilities\ModuleItem.cs" />
+    <Compile Include="Modules\Utilities\ModuleManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Messages\Admin\CodesMessage.cs" />
+    <Compile Include="Messages\Law\CitationMessage.cs" />
+    <Compile Include="Framework\StandardGui\psKeyboardKey.cs" />
+    <Compile Include="Framework\StandardGui\i9CheckBox.cs" />
+    <Compile Include="Framework\StandardGui\i9ComboBox.cs" />
+    <Compile Include="Framework\StandardGui\psKeyboard.xaml.cs">
+      <DependentUpon>psKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\StandardGui\i9Label.cs" />
+    <Compile Include="Framework\StandardGui\i9RichTextBox.cs" />
+    <Compile Include="Framework\StandardGui\i9TextBox.cs" />
+    <Compile Include="Framework\Utilities\ClipboardItem.cs" />
+    <Compile Include="Framework\Utilities\ClipboardItems.cs" />
+    <Compile Include="Framework\Utilities\ClipboardManager.cs" />
+    <Compile Include="Framework\Utilities\ConfigurationManager.cs" />
+    <Compile Include="Framework\Utilities\SecurityManager.cs" />
+    <Compile Include="Framework\Utilities\SecurityManagerItem.cs" />
+    <Compile Include="Framework\Utilities\SettingManager.cs" />
+    <Compile Include="Framework\Utilities\SingleApplication.cs" />
+    <Compile Include="Framework\Utilities\ValidateManager.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LawIncident\LawIncidentStandardReport.cs" />
+    <Compile Include="Reports\PDFUtility.cs" />
+    <Compile Include="Reports\ReportUtility.cs" />
+    <Compile Include="Themes\ThemeManager.cs" />
+    <Compile Include="Web References\Invert911service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Framework\StandardGui\psKeyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\ConfidentialityPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\AgencyPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\InterfaceSettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\SystemLogPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\PersonnelGroupsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\PersonnelPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\SchedulePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\SecurityPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\SystemConfigurationsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\CodeAdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Admin\SystemKeyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\CAD\AVLWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\CAD\BOLO\BOLOWorkspace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\CAD\Briefing\BriefingWorkspace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\CAD\CADServiceCall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\CAD\CommandWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\CAD\DispatchWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\CAD\EventEntryWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\CAD\EventsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\CAD\MessageSwitchPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\CAD\MessageWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\CAD\MobileTerminalPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\CAD\QAWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\CAD\UnitStatusWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Arrest\Arrests.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Attachments.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\DynamicEntry\DynamicEntrySetpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Common\Links.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Person\PersonSMTs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Person\PersonAKAs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Location\Location.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Location\Locations.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Narrative.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Offense.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Person\Person.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Person\Persons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Arrest\Arrest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Property\Properties.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Property\Property.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Admin\DynamicEntryAdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Common\Vehicle\Vehicle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Vehicle\Vehicles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\DynamicEntry\DynamicEntryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Law\Arrest\ArrestWorkspace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\BicycleRegistration\BicycleRegistrationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\CaseManagement\CaseManagementPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Law\Citation\CitationEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Citation\CitationMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Citation\CitationMenuUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Citation\CitationWorkspace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Citation\PartInvolvedUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\FieldContact\FieldContactEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\FieldContact\FieldContactMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\FieldContact\FieldContactWorkspace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Gang\GangEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Gang\GangMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Gang\GangWorkspace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Impound\ImpoundPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Common\Linkage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Law\PolicePad\PolicePadControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\PolicePad\PolicePadEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\PolicePad\PolicePadWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Law\PolicePad\PolicePadMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\PolicePad\PolicePadWorkspace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Incident\IncidentControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Incident\IncidentEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Incident\IncidentMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Incident\IncidentWorkspace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\PawnTickets\PawnTicketsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\PetRegistration\PetRegistrationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\PhotoLineUp\PhotoLineUpWorkspace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\PropertyRoom\PropertyRoomWorkspace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\SexOffender\SexOffenderPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Law\Warrant\WarrantWorkspace.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Main\MainMenuPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Main\LoginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Main\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Modules\Main\SplashPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Utilities\AdHocReportControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Utilities\AdHocReportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Utilities\SQLDataBaseDocumentationrPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ExpressionDark\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ExpressionDark\Theme_Original.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ExpressionLight\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\psDefault\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\psNightTime\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InvertClientCloud.ico" />
+    <Resource Include="Images\InvertClientLite.ico" />
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="DataTypes\DataClasses\i9Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>i9Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataTypes\DataClasses\i9Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>i9Model.edmx</DependentUpon>
+      <LastGenOutput>i9Model.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DataTypes\DataClasses\i9Model.edmx.diagram">
+      <DependentUpon>i9Model.edmx</DependentUpon>
+    </None>
+    <None Include="DataTypes\DataClasses\i9Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>i9Model.edmx</DependentUpon>
+      <LastGenOutput>i9Model.cs</LastGenOutput>
+    </None>
+    <Content Include="Documentation\Invert911UserGuide.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reports\LawIncident\CHP555\chp555_Page1.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\LawIncident\CHP555\chp555_Page2.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\LawIncident\CHP555\chp555_Page3.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\LawIncident\CHP555\chp555_Page4.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\LawIncident\DeltaReports\ArrestReport.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\LawIncident\DeltaReports\ContinuationPage.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\LawIncident\DeltaReports\IncidentReport.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\LawIncident\DeltaReports\Supplemental.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web References\Invert911service\invert911service.wsdl" />
+    <None Include="Web References\Invert911service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="WixHarvestProject.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataTypes\DataSets\" />
+    <Folder Include="Integration\CopLogic\" />
+    <Folder Include="Integration\LiveScan3M\" />
+    <Folder Include="Messages\CAD\" />
+    <Folder Include="Messages\Citation\" />
+    <Folder Include="Modules\Corrections\" />
+    <Folder Include="Modules\EMS\" />
+    <Folder Include="Modules\Fire\" />
+    <Folder Include="Modules\Law\Event\" />
+    <Folder Include="Reports\AdminCode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\OCP_Logo.png" />
+    <Resource Include="Images\charactergrowfont.png" />
+    <Resource Include="Images\charactershrinkfont.png" />
+    <Resource Include="Images\Database Inactive.png" />
+    <Resource Include="Images\diagnosticTest.png" />
+    <Resource Include="Images\editcopy.png" />
+    <Resource Include="Images\editcut.png" />
+    <Resource Include="Images\editpaste.png" />
+    <Resource Include="Images\editredo.png" />
+    <Resource Include="Images\editundo.png" />
+    <Resource Include="Images\error-1.png" />
+    <Resource Include="Images\error-2-small.png" />
+    <Resource Include="Images\error-2.png" />
+    <Resource Include="Images\fail.png" />
+    <Resource Include="Images\fastForward-1.png" />
+    <Resource Include="Images\fastForward-2.png" />
+    <Resource Include="Images\fileopen.png" />
+    <Resource Include="Images\filesave.png" />
+    <Resource Include="Images\Filter Feather.png" />
+    <Resource Include="Images\floppy-drive.png" />
+    <Resource Include="Images\folder.png" />
+    <Resource Include="Images\forward.png" />
+    <Resource Include="Images\forward2.png" />
+    <Resource Include="Images\help.png" />
+    <Resource Include="Images\home_1.png" />
+    <Resource Include="Images\information-1.png" />
+    <Resource Include="Images\information-2.png" />
+    <Resource Include="Images\information.png" />
+    <Resource Include="Images\listbullets.png" />
+    <Resource Include="Images\listnumbering.png" />
+    <Resource Include="Images\paragraphcenterjustify.png" />
+    <Resource Include="Images\paragraphdecreaseindentation.png" />
+    <Resource Include="Images\paragraphfulljustify.png" />
+    <Resource Include="Images\paragraphincreaseindentation.png" />
+    <Resource Include="Images\paragraphleftjustify.png" />
+    <Resource Include="Images\paragraphrightjustify.png" />
+    <Resource Include="Images\pass-2.png" />
+    <Resource Include="Images\pass-small.png" />
+    <Resource Include="Images\pass.png" />
+    <Resource Include="Images\ScriptPass.png" />
+    <Resource Include="Images\scsi.png" />
+    <Resource Include="Images\start.png" />
+    <Resource Include="Images\startTest-2.png" />
+    <Resource Include="Images\stopTest.png" />
+    <Resource Include="Images\Task Report.png" />
+    <Resource Include="Images\up.png" />
+    <Resource Include="Images\User Anonymous Yellow.png" />
+    <Resource Include="Images\warning.png" />
+    <Resource Include="Images\yield-2.png" />
+    <None Include="Web References\Invert911service\invert911service.disco" />
+    <None Include="DataTypes\DataClasses\i9Model.edmx.sql" />
+    <None Include="InvertCommonProject.wxs" />
+    <Resource Include="Images\MobileTerminal.ico" />
+    <Resource Include="Images\Refresh1.png" />
+    <Resource Include="Images\Refresh2.png" />
+    <Resource Include="Images\Refresh3.png" />
+    <Resource Include="Images\Monitor.png" />
+    <Resource Include="Images\Policeman.ico" />
+    <Resource Include="Images\PoliceAtNight.jpg" />
+    <Resource Include="Images\Results.png" />
+    <Resource Include="Images\SaveBlue.png" />
+    <Resource Include="Images\Users.png" />
+    <Resource Include="Images\Attachment.png" />
+    <Resource Include="Images\book_open.png" />
+    <Resource Include="Images\ButtonBack.png" />
+    <Resource Include="Images\ButtonForward.png" />
+    <Resource Include="Images\ButtonHome.png" />
+    <Resource Include="Images\ButtonRefresh.png" />
+    <Resource Include="Images\candlestick.png" />
+    <Resource Include="Images\car_sedan_grey.ico" />
+    <Resource Include="Images\check.png" />
+    <Resource Include="Images\clipboard.png" />
+    <Resource Include="Images\clipboard_empty.png" />
+    <Resource Include="Images\copy.png" />
+    <Resource Include="Images\cubes.png" />
+    <Resource Include="Images\cube_molecule.png" />
+    <Resource Include="Images\CustomizeLarge.png" />
+    <Resource Include="Images\cut.png" />
+    <Resource Include="Images\data.png" />
+    <Resource Include="Images\document_add.png" />
+    <Resource Include="Images\document_check.png" />
+    <Resource Include="Images\document_exchange.png" />
+    <Resource Include="Images\document_find.png" />
+    <Resource Include="Images\DragCopy.png" />
+    <Resource Include="Images\DragRemove.png" />
+    <Resource Include="Images\dude5.png" />
+    <Resource Include="Images\form_blue.png" />
+    <Resource Include="Images\form_green.png" />
+    <Resource Include="Images\form_red.png" />
+    <Resource Include="Images\form_yellow.png" />
+    <Resource Include="Images\funnel.png" />
+    <Resource Include="Images\funnel3d.png" />
+    <Resource Include="Images\Globe.png" />
+    <Resource Include="Images\graphics-tablet.png" />
+    <Resource Include="Images\Information_48x48.png" />
+    <Resource Include="Images\Last_32x32.png" />
+    <Resource Include="Images\link.png" />
+    <Resource Include="Images\Mail_32x32.png" />
+    <Resource Include="Images\map-to-gps.png" />
+    <Resource Include="Images\Narrative.png" />
+    <Resource Include="Images\Next_32x32.png" />
+    <Resource Include="Images\OCP_Logo.jpg" />
+    <Resource Include="Images\OpenFolder.png" />
+    <Resource Include="Images\PageSetup_32x32.png" />
+    <Resource Include="Images\PasteLarge.png" />
+    <Resource Include="Images\Person.png" />
+    <Resource Include="Images\photo_portrait.png" />
+    <Resource Include="Images\pie.png" />
+    <Resource Include="Images\pie3d.png" />
+    <Resource Include="Images\PlayRound.png" />
+    <Resource Include="Images\Prev_32x32.png" />
+    <Resource Include="Images\PrintDialog_32x32.png" />
+    <Resource Include="Images\printer.png" />
+    <Resource Include="Images\Print_32x32.png" />
+    <Resource Include="Images\Question_48x48.png" />
+    <Resource Include="Images\RedoLarge.png" />
+    <Resource Include="Images\SaveFileLarge.png" />
+    <Resource Include="Images\SolvabilityFactors.png" />
+    <Resource Include="Images\Supplement.png" />
+    <Resource Include="Images\text.png" />
+    <Resource Include="Images\text_marked.png" />
+    <Resource Include="Images\text_tree.png" />
+    <Resource Include="Images\text_view.png" />
+    <Resource Include="Images\TwoPages_32x32.png" />
+    <Resource Include="Images\Warning_48x48.png" />
+    <Resource Include="Images\wheel.png" />
+    <Resource Include="Images\ZoomIn_32x32.png" />
+    <Resource Include="Images\ZoomOut_32x32.png" />
+    <Resource Include="Images\shield.png" />
+    <None Include="Modules\Common\DynamicEntry\GetTableSchema.sql" />
+    <None Include="Modules\Common\DynamicEntry\TemplateDyn.txt" />
+    <Resource Include="Modules\Main\Mascot.png" />
+    <CodeAnalysisDictionary Include="ToDoList.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.invert911.com/invert911service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Invert911service\</RelPath>
+      <UpdateFromURL>http://www.invert911.com/invert911service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Invert911_InvertCommon_Invert911service_Invert911Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

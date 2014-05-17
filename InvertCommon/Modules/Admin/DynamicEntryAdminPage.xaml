@@ -1,0 +1,178 @@
+﻿<Page x:Class="Invert911.InvertCommon.Modules.Admin.DynamicEntryAdminPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:c="clr-namespace:Invert911.InvertCommon.Modules.Common.DynamicEntry"       
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"      
+       xmlns:i9sg="clr-namespace:Invert911.InvertCommon.StandardGui"
+        d:DesignWidth="652" mc:Ignorable="d" d:DesignHeight="749">
+    
+    <DockPanel Name="MainDockPanel" LastChildFill="true">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Button Name="MainButton" Click="MainButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="18" Source="/Invert911.InvertCommon;component/Images/ButtonHome.png" />
+                    <TextBlock Text="Main" Margin="2,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="SaveButton" Click="SaveButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="18" Source="/Invert911.InvertCommon;component/Images/SaveFileLarge.png" />
+                    <TextBlock Text="Save" Margin="2,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Button Name="CancelButton" Click="CancelButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="18" Source="/Invert911.InvertCommon;component/Images/RedoLarge.png" />
+                    <TextBlock Text="Cancel" Margin="2,0,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <Label Name="ErrorMsgLabel"></Label>
+        </StackPanel>
+        <GroupBox Header="Dynamic Entry Controls" DockPanel.Dock="Left" MinWidth="170">
+            <ListBox  Name="DynamicEntryControlsListBox" >
+                
+            </ListBox>
+        </GroupBox>
+        <TabControl>
+            <TabItem Header="Configurations">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition  />
+                        <RowDefinition Height ="Auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="Dynamic Entry Columns" Grid.Row="0" MinHeight="80" >
+                        <DockPanel>
+                            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                                <Button>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/DragCopy.png" />
+                                        <TextBlock Text="Add" Margin="2,0,0,0" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Button>
+                                <Button>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/DragRemove.png" />
+                                        <TextBlock Text="Delete" Margin="2,0,0,0" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Button>
+                                <Button Name="SelectAllButton" Click="SelectAllButton_Click" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/document_check.png" />
+                                        <TextBlock Text="Select All" Margin="2,0,0,0" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Button>
+                                <Button Name="UnSelectAllButton" Click="UnSelectAllButton_Click" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Height="18" Source="/Invert911.InvertCommon;component/Images/document_check.png" />
+                                        <TextBlock Text="UnSelect All" Margin="2,0,0,0" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <!--<DataGrid  Name="DynamicEntryColumnsDG" Height="130" />-->
+                            <ListView Name="DynamicEntryColumnsListView" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" >
+                                
+                                <ListView.Resources>
+                                    <!-- Use BasedOn to preserve existing style -->
+                                    <Style TargetType="CheckBox" BasedOn="{StaticResource {x:Type CheckBox}}">
+                                        <Setter Property="Foreground" Value="Green" />
+                                    </Style>
+                                </ListView.Resources>
+                                
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn  >
+                                            <GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox   Margin="0" VerticalAlignment="Center" IsChecked="{Binding Path=Enabled}" />
+                                                    <!--<CheckBox Margin="0" VerticalAlignment="Center" IsChecked="{Binding IsChecked}"/>-->
+                                                </DataTemplate>
+                                            </GridViewColumn.CellTemplate>
+                                        </GridViewColumn>
+                                        <GridViewColumn  Width="120" Header="Column Name" DisplayMemberBinding= "{Binding ColumnName}" />
+                                        <GridViewColumn  Width="120" Header="Label Text" DisplayMemberBinding= "{Binding LabelText}" />
+                                        <GridViewColumn  Width="120" Header="Data Type"  DisplayMemberBinding= "{Binding DataType}"  />
+                                        <GridViewColumn Width="120" Header="Max Length"  DisplayMemberBinding= "{Binding MaxLength}"  />
+                                        <GridViewColumn Width="120" Header="Print Enabled"  DisplayMemberBinding= "{Binding PrintEnabled}"  />
+                                        <GridViewColumn Width="120" Header="Control Type"  DisplayMemberBinding= "{Binding CtrlTypeName}"  />
+                                        <GridViewColumn Width="120" Header="Display Order"  DisplayMemberBinding= "{Binding DisplayOrder}"  />
+                                        <GridViewColumn Width="120" Header="Read Only"  DisplayMemberBinding= "{Binding IsReadOnly}"  />
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </DockPanel>
+                    </GroupBox>
+
+                    <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Background="Black" ShowsPreview="True" Height="3" />
+
+                    <DockPanel Grid.Row="2">
+                        <GroupBox Header="Dynamic Entry UI Column Details"  >
+                            <TabControl>
+                                <TabItem Header="Column UI">
+                                    <DockPanel>
+                                        <StackPanel>
+                                            <Label Height="26">Enabled</Label>
+                                            <Label Height="26">Column</Label>
+                                            <Label Height="26">Label</Label>
+                                            <Label Height="26">Tool Popup</Label>
+                                            <Label Height="26" >Data Type</Label>
+                                            <Label Height="26">Max Length</Label>
+                                            <Label Height="26">Print Enabled</Label>
+                                            <Label Height="26">Control Type</Label>
+                                            <Label Height="26">Control Width</Label>
+                                            <Label Height="26">Display Order</Label>
+                                            <Label Height="26">Read Only</Label>
+                                            <Label Height="26">Code Set</Label>
+                                            <!--<Label Height="26">Rules</Label>-->
+                                        </StackPanel>
+                                        <StackPanel>
+                                            <CheckBox Height="26" IsChecked="{Binding Path=Enabled}"></CheckBox>
+                                            <TextBox Height="26" IsReadOnly="True" Text="{Binding Path=ColumnName}"/>
+                                            <TextBox Height="26" Text="{Binding Path=LabelText}"/>
+                                            <TextBox Height="26" Text="{Binding Path=ToolPopup}"></TextBox>
+                                            <TextBox Height="26" Text="{Binding Path=DataType}" IsReadOnly="True"></TextBox>
+                                            <TextBox Height="26" Text="{Binding Path=MaxLength}"></TextBox>
+                                            <CheckBox Height="26" IsChecked="{Binding Path=PrintEnabled}"></CheckBox>
+                                            <i9sg:i9ComboBox i9BindTable="" i9BindColumn="" Height="26" Text="{Binding Path=CtrlTypeName}" x:Name="ControlTypeComboBox" DropDownOpened="ControlTypeComboBox_DropDownOpened" IsEditable="True"></i9sg:i9ComboBox>
+                                            <TextBox Height="26" Text="{Binding Path=CtrlWidth}"></TextBox>
+                                            <TextBox Height="26" Text="{Binding Path=DisplayOrder}" PreviewTextInput="TextBox_PreviewTextInput" ></TextBox>
+                                            <CheckBox Height="26" IsChecked="{Binding Path=IsReadOnly}"></CheckBox>
+                                            <i9sg:i9ComboBox i9BindTable="" i9BindColumn=""  Height="26" Text="{Binding Path=CodeSetName}"  x:Name="CodeSetNameComboBox" DropDownOpened="CodeSetNameComboBox_DropDownOpened"></i9sg:i9ComboBox>
+                                        </StackPanel>
+                                    </DockPanel>
+                                </TabItem>
+                                <TabItem Header="Column Rules">
+                                    <ListView Name="DynamicEntryRulesListView"  >
+                                        <ListView.View>
+                                            <GridView>
+                                                <GridViewColumn  >
+                                                    <GridViewColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <CheckBox Margin="0" VerticalAlignment="Center"/>
+                                                            <!--<CheckBox Margin="0" VerticalAlignment="Center" IsChecked="{Binding IsChecked}"/>-->
+                                                        </DataTemplate>
+                                                    </GridViewColumn.CellTemplate>
+                                                </GridViewColumn>
+                                                <GridViewColumn  Width="120" Header="Rule Name" DisplayMemberBinding= "{Binding RuleName}" />
+                                                <GridViewColumn  Width="120" Header="Rule Type"  DisplayMemberBinding= "{Binding RuleType}"  />
+                                                <GridViewColumn Width="120" Header="Enabled"  DisplayMemberBinding= "{Binding Enabled}"  />
+                                            </GridView>
+                                        </ListView.View>
+                                    </ListView>
+                                </TabItem>
+                            </TabControl>
+                        </GroupBox>
+                    </DockPanel>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Runtime test">
+                <DockPanel>
+                    <Button Name="RefreshButton" DockPanel.Dock="Top" Click="RefreshButton_Click">Refresh</Button>
+                    <c:DynamicEntryControl></c:DynamicEntryControl>
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Page>

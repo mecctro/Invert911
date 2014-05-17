@@ -1,0 +1,38 @@
+﻿<UserControl  x:Class="Invert911.Citation.CitationEntry"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="482" Width="672" Loaded="Window_Loaded">
+    <DockPanel LastChildFill="True" >
+		<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" DockPanel.Dock="Right">
+			<StackPanel  Orientation="Vertical" >
+				<Label HorizontalAlignment="Center" Height="25" Width="70" Name="MenuLabel">CITATION</Label>
+				<Button Height="70" Width="70" Name="SaveButton" >Save</Button>
+				<Button Height="70" Width="70" Name="PrintButton">Print</Button>
+				<Button Height="70" Width="70" Name="CopyButton">Copy</Button>
+				<Button Height="70" Width="70" Name="NextButton">Next</Button>
+				<Button Height="70" Width="70" Name="CancelButton">Cancel</Button>
+			</StackPanel>
+		</ScrollViewer>
+
+        <TabControl  Name="MainTabControl" Canvas.Top="18" Grid.RowSpan="2">
+			<TabItem  Header="Citation" Name="tabItem1" >
+                <DockPanel Name="PersonDockPanel" LastChildFill="True"> 
+                        <GroupBox DockPanel.Dock="Top" Header="General" Name="OffenseGeneralGroupBox" VerticalAlignment="Top">
+                            <Canvas Height="104"></Canvas>
+                        </GroupBox>
+                        <GroupBox DockPanel.Dock="Top" Header="Name" Name="GeneralGroupBox" Height="166" VerticalAlignment="Top">
+							<Canvas ></Canvas>
+						</GroupBox>
+                    <GroupBox DockPanel.Dock="Top" Header="Address">
+							<Canvas></Canvas>
+						</GroupBox>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="Print">
+                <DockPanel>
+                    <DocumentViewer Name="documentViewer1" />
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</UserControl>

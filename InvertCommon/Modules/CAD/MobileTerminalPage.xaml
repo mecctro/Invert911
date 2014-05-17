@@ -1,0 +1,90 @@
+﻿<Page x:Class="Invert911.CAD.MobileTerminalPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Cit="clr-namespace:Invert911.Citation"
+    xmlns:Inc="clr-namespace:Invert911.Incident"
+    xmlns:Hix="clr-namespace:Invert911.InvertCommon.StandardGui"
+  
+    Title="MDT" Height="419.049" Width="794" Loaded="Page_Loaded"  KeyUp="Window_KeyUp" Unloaded="Page_Unloaded" >
+    <DockPanel LastChildFill="True" Name="MainDockPanel" >
+        <Menu x:Uid="Menu_1" Name="_mainMenu" DockPanel.Dock="Top">
+            <MenuItem x:Uid="MenuItem_41" Name="_fileMenu">
+                <MenuItem.Header>_File</MenuItem.Header>
+                <MenuItem x:Uid="MenuItem_42" Command="New">
+                    <MenuItem.Header>_New</MenuItem.Header>
+                </MenuItem>
+                <MenuItem x:Uid="MenuItem_43" Command="Open">
+                    <MenuItem.Header>_Open...</MenuItem.Header>
+                </MenuItem>
+                <MenuItem x:Uid="MenuItem_44" Command="Save">
+                    <MenuItem.Header>_Save</MenuItem.Header>
+                </MenuItem>
+                <MenuItem x:Uid="MenuItem_45" Command="SaveAs">
+                    <MenuItem.Header>Save _As...</MenuItem.Header>
+                </MenuItem>
+                <Separator x:Uid="MenuItem_46" />
+                <MenuItem x:Uid="MenuItem_48" Command="Print">
+                    <MenuItem.Header>_Print...</MenuItem.Header>
+                </MenuItem>
+                <Separator x:Uid="MenuItem_49" />
+                <MenuItem x:Uid="ExitMenuItem" Click="MenuItem_Click" >
+                    <MenuItem.Header>E_xit</MenuItem.Header>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Uid="MenuItem_51" Name="_editMenu">
+                <MenuItem.Header>_Edit</MenuItem.Header>
+                <MenuItem x:Uid="MenuItem_52" IsEnabled="True" Name="_undo" Command="Undo">
+                    <MenuItem.Header>_Undo</MenuItem.Header>
+                </MenuItem>
+                <MenuItem x:Uid="MenuItem_53" IsEnabled="False" Name="_redo" Command="Redo">
+                    <MenuItem.Header>_Redo</MenuItem.Header>
+                </MenuItem>
+                <Separator x:Uid="MenuItem_54" />
+                <MenuItem x:Uid="MenuItem_55" Name="_cut" Command="Cut">
+                    <MenuItem.Header>Cu_t</MenuItem.Header>
+                </MenuItem>
+                <MenuItem x:Uid="MenuItem_56" Name="_copy" Command="Copy">
+                    <MenuItem.Header>_Copy</MenuItem.Header>
+                </MenuItem>
+                <MenuItem x:Uid="MenuItem_57" Name="_paste" Command="Paste">
+                    <MenuItem.Header>_Paste</MenuItem.Header>
+                </MenuItem>
+                <MenuItem x:Uid="MenuItem_58" Name="_delete" Command="Delete">
+                    <MenuItem.Header>De_lete</MenuItem.Header>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Uid="MenuItem_32" Name="_helpMenu">
+                <MenuItem.Header>_Help</MenuItem.Header>
+                <MenuItem x:Uid="MenuItem_33" >
+                    <MenuItem.Header>_Help Topics</MenuItem.Header>
+                </MenuItem>
+                <MenuItem x:Uid="MenuItem_34" IsEnabled="False">
+                    <MenuItem.Header>H_elp Home</MenuItem.Header>
+                </MenuItem>
+                <Separator x:Uid="MenuItem_35" />
+                <MenuItem x:Uid="MenuItem_36" >
+                    <MenuItem.Header>_About Law Records WPF</MenuItem.Header>
+                </MenuItem>
+                <Separator x:Uid="MenuItem_37" />
+                <MenuItem x:Uid="MenuItem_38" >
+                    <MenuItem.Header>_Show Known Issues</MenuItem.Header>
+                </MenuItem>
+                <MenuItem x:Uid="MenuItem_39" >
+                    <MenuItem.Header>Configure _File Associations...</MenuItem.Header>
+                </MenuItem>
+                <MenuItem x:Uid="MenuItem_40" Name="reportIssue" >
+                    <MenuItem.Header>_Report an Issue</MenuItem.Header>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <StackPanel DockPanel.Dock="Top"  Name ="ModulesList"  Orientation="Horizontal"  Height="42" ></StackPanel>
+		<StackPanel DockPanel.Dock="Bottom" Name="KeyboardArea" Visibility="Collapsed">
+			<Hix:psKeyboard  x:Name="MainKeyboard" Background="Transparent" DockPanel.Dock="Top"></Hix:psKeyboard>
+		</StackPanel>
+		<TreeView DockPanel.Dock="Left" Width="130" Name="NavigatorTreeView"></TreeView>
+        <GroupBox DockPanel.Dock="Right" Name="psClipboard" Header="Clipboard" Visibility="Collapsed" Width="130">
+			<TreeView Name="ClipboardTreeView"></TreeView>
+		</GroupBox>
+        <Grid  Name="MainBackground" ></Grid>
+    </DockPanel>
+</Page>

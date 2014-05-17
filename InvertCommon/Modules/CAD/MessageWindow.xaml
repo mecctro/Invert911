@@ -1,0 +1,17 @@
+﻿<Window x:Class="Invert911.CAD.MessageWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MessageWindow" Height="300" Width="300">
+    <Grid>
+        <ListView >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="From"/>
+                    <GridViewColumn Header="To"/>
+                    <GridViewColumn Header="Date Time"/>
+                    <GridViewColumn Header="Message" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
